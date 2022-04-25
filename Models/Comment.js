@@ -10,16 +10,12 @@ const commentSchema= new mongoose.Schema({
         type: String,
         required: [true, 'you need text']
     },
-    image:{ 
-        type: String
-
-    }
-
-    }, 
+    image: String,
+}, 
     {
         timestamps: true
     }
-    )
+)
 
-    const Comment=mongoose.model('Comment', commentSchema)
-    module.exports= Comment
+    const Comment = mongoose.model('Comment', commentSchema);
+    module.exports = Comment;

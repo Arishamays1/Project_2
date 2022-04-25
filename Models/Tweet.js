@@ -10,17 +10,14 @@ const tweetSchema= new mongoose.Schema({
         type: String,
         required: [true, 'you need text']
     },
-    image:{ 
-        type: String
-
-    }
-
+    image: String,
     }, 
     {
         timestamps: true
     }
 )
-const Tweet=mongoose.model('Tweet', tweetSchema)
-module.exports=Tweet
+
+const Tweet = mongoose.model('Tweet', tweetSchema);
+module.exports = Tweet;
 
 
