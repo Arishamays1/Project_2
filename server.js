@@ -1,16 +1,18 @@
 const express= require('express')
+const app= express();
 const methodOverride = require('method-override')
-const app= express()
-PORT= 4000
+const PORT = 4000;
+
 
  // DB CONNECTION
 require('./config/db.connection')
 
+
 //---------MIDDLEWARE---------
+app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
-app.set('view engine', 'ejs')
-
+app.use(express.urlencoded({extended: false}))
 
 
 //-----------ROUTING-----------
