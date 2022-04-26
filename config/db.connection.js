@@ -12,7 +12,8 @@ mongoose.connect(connectionStr);
 
 // mongoDB connection on success
 mongoose.connection.on('connected', () => {
-    console.log(`[${new Date().toLocaleTimeString()}] - MongoDB connected... 🙌 🙌 🙌`)
+    console.log(`[${new Date().toLocaleTimeString()
+    }] - MongoDB connected... 🙌 🙌 🙌`)
 })
 
 // mongoDB connection on error

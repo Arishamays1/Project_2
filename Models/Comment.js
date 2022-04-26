@@ -1,6 +1,6 @@
-const mongoose= require('mongoose')
+const mongoose = require('mongoose')
 
-const commentSchema= new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
     handle: { 
         type: String, 
         required: [true, 'you need a Twitter handle']
