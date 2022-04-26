@@ -17,7 +17,17 @@ app.use(express.urlencoded({extended: false}))
 
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
-    res.send(`This works!`)
+    res.send(`Welcome to Elon Musk's Twitter!`)
+})
+
+//--------ALL TWEETS ROUTE---------
+app.get('/tweets', (req, res) => {
+    res.render('index')
+})
+
+//-------NEW TWEET ROUTE-----------
+app.get('/tweets/new', (req, res) => {
+    res.render('new')
 })
 
 
