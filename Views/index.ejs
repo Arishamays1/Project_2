@@ -4,6 +4,7 @@
     <%- include('partials/head.ejs') %>
 
 <body>
+    <div class="indexPage">
 
     <div class="indexNav">
         <%- include('partials/nav.ejs')%>
@@ -18,13 +19,13 @@
            <% const oneTweet = tweet[i] %>
            <div class="tweet">
                <h2> @<%= oneTweet.handle %></h2> 
-               <h3><%= oneTweet.text %></h3>
+               <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
                <h4><%= oneTweet.createdAt %></h4>
            </div>
         <% } %>
     </div>
     
-
+</div>
 
 
 </body>
