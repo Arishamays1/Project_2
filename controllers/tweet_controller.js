@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models')
 
 // GET ALL TWEETS ROUTE
-router.get('/tweet', async (req, res, next) => {
+router.get('/tweets', async (req, res, next) => {
     try {
         const tweet = await db.Tweet.find({});
         const context = {tweet}
