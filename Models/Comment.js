@@ -10,8 +10,16 @@ const commentSchema = new mongoose.Schema({
         type: String,
         required: [true, 'you need text']
     },
-    image: String,
-}, 
+    image: {String},
+    
+    product: {
+    
+    type: mongoose.Types.ObjectId,
+    
+    ref: 'Tweet'
+  },
+},
+
     {
         timestamps: true
     }
