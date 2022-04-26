@@ -2,7 +2,7 @@
 require('./config/db.connection.js')
 
 // REQUIRING
-const Tweet = require('./Models/Tweet')
+const Tweet = require('./models/Tweet')
 
 
 //---------CREATE METHOD-----------
