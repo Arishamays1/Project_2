@@ -14,6 +14,10 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
+//----------MODELS-------------
+const tweets = require('./Models/Tweet')
+const comments = require('./Models/Comment')
+
 
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
@@ -26,8 +30,19 @@ app.get('/tweets', (req, res) => {
 })
 
 //-------NEW TWEET ROUTE-----------
-app.get('/tweets/new', (req, res) => {
+app.get('/tweets/newtweet', (req, res) => {
     res.render('new')
+})
+
+//------SHOW TWEET ROUTE----------
+app.get('/tweets/:id', (req, res) => {
+    let tweetId = req.params.id
+    console.log('hitting show route')
+    const context = {
+        oneTweet: tweets[tweetId],
+        message: 'I am the show route'
+    }
+    res.render('show.ejs', context)
 })
 
 
