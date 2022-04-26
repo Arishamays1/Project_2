@@ -20,6 +20,16 @@ app.get('/', (req, res) => {
     res.send(`Welcome to Elon Musk's Twitter!`)
 })
 
+//--------ALL TWEETS ROUTE---------
+app.get('/tweets', (req, res) => {
+    res.render('index')
+})
+
+//-------NEW TWEET ROUTE-----------
+app.get('/tweets/new', (req, res) => {
+    res.render('new')
+})
+
 
 app.listen(PORT, () => {
     console.log(`listening to ${PORT}`)
