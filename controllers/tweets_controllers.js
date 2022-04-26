@@ -22,14 +22,19 @@ router.get('/newtweet', (req, res) => {
 })
 
 //------SHOW TWEET ROUTE----------
-router.get('/:id', (req, res) => {
-    let tweetId = req.params.id
-    console.log('hitting show route')
+router.get('/:id', async (req, res, next) => {
+    try {
+    const foundTweet = await db.Tweet.findById(req.params.id)
     const context = {
-        oneTweet: tweets[tweetId],
+        oneTweet: foundTweet,
         message: 'I am the show route'
     }
-    res.render('show.ejs', context)
+    return res.render('show.ejs', context)
+    } catch(error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 module.exports = router;
