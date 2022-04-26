@@ -50,3 +50,16 @@ body {
 .showTweet {
     margin: 5% auto;
 }
+
+/* ----NEW PAGE STYLING---- */
+.newNav {
+    text-align: center;
+}
+
+.newHeader {
+    text-align: center;
+}
+
+.newTweet {
+    margin: 5% auto;
+}
