@@ -1,4 +1,4 @@
 module.exports = {
-    tweet: require('./tweet_controller'),
-    comment: require('./comment_controller')
+    tweets: require('./tweets_controllers'),
+    comments: require('./comments_controllers')
 }

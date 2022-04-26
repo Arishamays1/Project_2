@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
-//-----------Models--------------
 const db = require('../models')
 
-// GET ALL TWEETS ROUTE
-router.get('/tweet', async (req, res, next) => {
+//---------ALL TWEETS ROUTE--------
+router.get('/', async (req, res, next) => {
     try {
         const tweet = await db.Tweet.find({});
         const context = {tweet}
@@ -18,7 +16,20 @@ router.get('/tweet', async (req, res, next) => {
     }
 });
 
+//-------NEW TWEET ROUTE-----------
+router.get('/newtweet', (req, res) => {
+    res.render('new')
+})
 
+//------SHOW TWEET ROUTE----------
+router.get('/:id', (req, res) => {
+    let tweetId = req.params.id
+    console.log('hitting show route')
+    const context = {
+        oneTweet: tweets[tweetId],
+        message: 'I am the show route'
+    }
+    res.render('show.ejs', context)
+})
 
-//---------EXPORTS-----------
 module.exports = router;

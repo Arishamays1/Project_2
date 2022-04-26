@@ -5,7 +5,27 @@
 
 <body>
 
-    <h1>Elon Musk's Twitter</h1>
+    <div class="indexNav">
+        <%- include('partials/nav.ejs')%>
+    </div>
+
+    <div class="indexHeader">
+        <h1>Elon Musk's Twitter</h1>
+    </div>
+
+    <div class="timeline">
+        <% for (let i = 0; i < tweet.length; i++) { %>
+           <% const oneTweet = tweet[i] %>
+           <div class="tweet">
+               <h2> @<%= oneTweet.handle %></h2> 
+               <h3><%= oneTweet.text %></h3>
+               <h4><%= oneTweet.createdAt %></h4>
+           </div>
+        <% } %>
+    </div>
     
+
+
+
 </body>
 </html>
