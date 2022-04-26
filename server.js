@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: false}))
 
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
-    res.send(`This works!`)
+    res.send(`Welcome to Elon Musk's Twitter!`)
 })
 
 
