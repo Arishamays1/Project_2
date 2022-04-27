@@ -12,7 +12,7 @@ router.get('/:id', async (req, res, next) => {
         oneProfile: foundProfile,
         message: 'I am the show route'
     }
-    return res.render('show.ejs', context)
+    return res.render('profile/show.ejs', context)
     } catch(error) {
         console.log(error);
         req.error = error;
