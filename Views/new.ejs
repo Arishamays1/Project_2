@@ -4,6 +4,7 @@
     <%- include('partials/head.ejs') %>
 
 <body>
+    <div class="newPage">
 
     <div class="newNav">
         <%- include('partials/nav.ejs')%>
@@ -13,6 +14,22 @@
         <h1>Create New Tweet</h1>
     </div>
     
-    
+    <div class="newTweet">
+        <form method="POST" action="/tweets">
+            <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
+            <!-- action => destination for the post req -->
+            <div>
+                <label for="handle"> Twitter Handle: </label>
+                <input id="handle" name="handle" type="text" />
+            </div>
+            <div>
+                <label for="text"> What's happening? </label>
+                <input id="text" name="text" type="text" />
+            </div>
+            <input type="submit" value="Create new tweet">
+        </form>
+    </div>
+    </div>
+
 </body>
 </html>
