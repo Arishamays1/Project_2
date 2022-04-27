@@ -28,11 +28,11 @@
             <input name="handle" placeholder="What's your handle?"/>
             <input name="text" placeholder="Your thoughts?"/>
             <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
-            <input type="submit" value="Submit Tweet"/>
+            <input type="submit" value="Submit Comment"/>
         </form>
     </div>
         <%for(let i =0; i< comments.length; i++){%>
-            <h2><%=comments[i].handle%></h2>
+            <h2>@<%=comments[i].handle%></h2>
             <h3><%= comments[i].text %></h3>
         <h4><%= comments[i].createdAt %></h4>
         <%}%>
