@@ -29,6 +29,34 @@ const allComments= await db.Comment.find({})
          return next();
     }
 })
+//--------POST Route to send back to tweet ejs--------
+router.post('/new',async (req, res)=>{
+    try{ 
+        const newCommentData= req.body
+        const createdComment= await db.Comment.create(newCommentData);
+        console.log(createdComment)
+        res.redirect(`/tweets/${createdComment.Tweet}`)
+    }catch(error){
+        console.log(error);
+         req.error=error;
+         return next();
+    }
+})
+
+
+// destroy - delete 
+router.delete('/:commentId', async (req,res, next)=>{
+    // res.send('hitting review delete: '+req.params.reviewId)
+    try{
+       const deleteReview = await db.Comment.findByIdAndDelete(req.params.reviewId)
+       console.log(deleteComment.id, "<<comment |",deleteComment.tweet,"<<product") 
+       res.redirect('/tweets/'+deleteComment.tweet)
+    }catch(error){
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
 
 
 module.exports = router;
