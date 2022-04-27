@@ -19,10 +19,6 @@
         <h4><%= oneTweet.createdAt %></h4>
     </div>
 
-    <div class="showComment">
-        <!-- ADD THE COMMENT SECTION HERE -->
-        
-    </div>
     <div>
         <form acion="/comment" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
@@ -31,11 +27,16 @@
             <input type="submit" value="Submit Comment"/>
         </form>
     </div>
+
+    <div class="showComment">
+        <!-- ADD THE COMMENT SECTION HERE -->
         <%for(let i =0; i< comments.length; i++){%>
             <h2>@<%=comments[i].handle%></h2>
             <h3><%= comments[i].text %></h3>
         <h4><%= comments[i].createdAt %></h4>
         <%}%>
+    </div>
+
     </div>
     
 </body>
