@@ -9,8 +9,8 @@ const Profile = require('./models/Profile');
 //---------CREATE METHOD-----------
 Tweet.create(
     {
-    handle: "626878baf561c1f5791d08a4",
-    text: "Thanks Joshua!"
+    handle: "6269653b058089a7720a5485",
+    text: "It was handle, not profile"
 })
 
 Comment.create({
