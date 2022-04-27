@@ -26,9 +26,12 @@ router.get('/newtweet', (req, res) => {
 router.get('/:id', async (req, res, next) => {
     try {
     const foundTweet = await db.Tweet.findById(req.params.id)
+    console.log(foundTweet)
+    const allComments= await db.Comment.find({tweet:req.params.id})
     const context = {
         oneTweet: foundTweet,
-        message: 'I am the show route'
+        message: 'I am the show route',
+        comments: allComments,
     }
     return res.render('show.ejs', context)
     } catch(error) {
@@ -46,7 +49,26 @@ router.post('/', async (req, res, next) => {
         res.redirect('/tweets');
     } catch (error) {
         console.log(error);
-        req.error = error;
+        req.error = error; 
+        return next();
+    }
+})
+
+router.post('/:id', async (req, res, next) => {
+    try {
+        // console.log(`The req.body is ${req.body}`)
+        const commenting= {
+            handle: req.body.handle,
+            text: req.body.text,
+            //incude img
+            tweet: req.params.id
+        }
+        const createdComment = await db.Comment.create(commenting);
+        console.log(`The created tweet is ${createdComment}`)
+        res.redirect(`/tweets/${req.params.id}`);
+    } catch (error) {
+        console.log(error);
+        req.error = error; 
         return next();
     }
 })
