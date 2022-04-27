@@ -4,7 +4,6 @@ const tweetSchema = new mongoose.Schema({
     handle: { 
         type: String, 
         required: [true, 'you need a Twitter handle']
-
     },
     text: {
         type: String,
