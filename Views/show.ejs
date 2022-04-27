@@ -20,7 +20,7 @@
     </div>
 
     <div>
-        <form action="/comment" method="POST"> 
+        <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
             <input name="text" placeholder="Your thoughts?"/>
             <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>

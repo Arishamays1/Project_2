@@ -1,8 +1,9 @@
 const express = require('express');
+const { Comment } = require('../models');
 const router = express.Router();
 const db = require('../models')
 
-//---------------------
+//----------GET ALL COMMENTS-----------
 router.get("/", async (req, res) => {
 const allComments= await db.Comment.find({})
       .populate("Tweet")
@@ -21,12 +22,12 @@ const allComments= await db.Comment.find({})
   router.get('/new', async (req,res, next)=>{
     try{ 
         const allTweets= await db.Tweet.find({})
-    const context= {tweet: allTweets}
-    res.render('comments/new.ejs', context)
+        const context= {tweet: allTweets}
+        res.render('comments/new.ejs', context)
     }catch(error){
         console.log(error);
-         req.error=error;
-         return next();
+        req.error=error;
+        return next();
     }
 })
 //--------POST Route to send back to tweet ejs--------
