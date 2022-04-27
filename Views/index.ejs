@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include('partials/head.ejs') %>
+    <%- include('functions.ejs') %>
 
 <body>
     <div class="indexPage">
@@ -21,12 +22,11 @@
                <h2> @<%= oneTweet.handle %></h2> 
                <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
                <h4><%= oneTweet.createdAt %></h4>
+               <button type = "button" class = "likes" onclick ='<%= liked(oneTweet) %>'>Like</button>
            </div>
         <% } %>
     </div>
     
 </div>
-
-
 </body>
 </html>
