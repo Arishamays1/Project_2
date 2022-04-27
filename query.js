@@ -2,8 +2,9 @@
 require('./config/db.connection.js')
 
 // REQUIRING
-const Tweet = require('./models/Tweet')
-const Comment = require('./models/Comment')
+const Tweet = require('./models/Tweet');
+const Comment = require('./models/Comment');
+const Profile = require('./models/Profile');
 
 //---------CREATE METHOD-----------
 // Tweet.create(
@@ -15,4 +16,8 @@ const Comment = require('./models/Comment')
 Comment.create({
     handle: "pigwittajig",
     text: "I concur."
+})
+
+Profile.create({
+    handle: "kimberlybaldeo"
 })
