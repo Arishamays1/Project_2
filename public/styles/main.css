@@ -69,7 +69,11 @@ body {
     margin: 5% auto;
 }
 
-.showProfileTweets {
+.profileTweetsSection {
+    margin: 5% auto;
+}
+
+.profileTweets {
     margin: 5% auto;
 }
 
