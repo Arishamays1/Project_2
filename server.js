@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: false}))
 //--------CONTROLLERS----------
 app.use('/tweets', controllers.tweets)
 app.use('/comments', controllers.comments)
-
+app.use('/profiles', controllers.profiles)
 
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`listening to ${PORT}`)
+    console.log(`listening to port: ${PORT}`)
 })
