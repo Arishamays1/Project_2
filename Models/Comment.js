@@ -4,26 +4,21 @@ const commentSchema = new mongoose.Schema({
     handle: { 
         type: String, 
         required: [true, 'you need a Twitter handle']
-
     },
     text: {
         type: String,
         required: [true, 'you need text']
     },
-    image: {String},
-    
+    image: String,
     tweet: {
-    
-    type: mongoose.Types.ObjectId,
-    
-    ref: 'Tweet'
-  },
+        type: mongoose.Types.ObjectId,
+        ref: 'Tweet'
+    },
 },
-
     {
-        timestamps: true
+    timestamps: true
     }
 )
 
-    const Comment = mongoose.model('Comment', commentSchema);
-    module.exports = Comment;
+const Comment = mongoose.model('Comment', commentSchema);
+module.exports = Comment;

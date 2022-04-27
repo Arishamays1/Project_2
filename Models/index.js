@@ -1,4 +1,5 @@
 module.exports = {
     Tweet: require('./Tweet'),
-    Comment: require('./Comment')
+    Comment: require('./Comment'),
+    Profile: require('./Profile')
 }
