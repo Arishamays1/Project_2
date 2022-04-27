@@ -6,11 +6,11 @@ const Tweet = require('./models/Tweet')
 const Comment = require('./models/Comment')
 
 //---------CREATE METHOD-----------
-Tweet.create(
-    {
-    handle: "jeffreygreen",
-    text: "Hello, this is my third tweet"
-})
+// Tweet.create(
+//     {
+//     handle: "",
+//     text: ""
+// })
 
 Comment.create({
     handle: "pigwittajig",

@@ -12,7 +12,7 @@ const commentSchema = new mongoose.Schema({
     },
     image: {String},
     
-    product: {
+    tweet: {
     
     type: mongoose.Types.ObjectId,
     

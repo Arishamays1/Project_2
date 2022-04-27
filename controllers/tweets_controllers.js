@@ -25,9 +25,11 @@ router.get('/newtweet', (req, res) => {
 router.get('/:id', async (req, res, next) => {
     try {
     const foundTweet = await db.Tweet.findById(req.params.id)
+    const allComments= await db.Comment.find({tweet: req.params.id})
     const context = {
         oneTweet: foundTweet,
-        message: 'I am the show route'
+        message: 'I am the show route',
+        comments: allComments
     }
     return res.render('show.ejs', context)
     } catch(error) {
