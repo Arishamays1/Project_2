@@ -23,11 +23,23 @@
             <!-- ----TWEET SHOW ROUTE---- -->
             <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
             <h4 style="color:red"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+            <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
            </div>
-           
         <% } %>
     </div>
-    
+    <script type="text/javascript">
+        const likeButtons = document.querySelectorAll(".likes")
+        for (let i = 0; i < likeButtons.length; i++) {
+            const button = likeButtons.item(i);
+            button.addEventListener("click", function(){ postLike(button.id) })
+        }
+        async function postLike(id) {
+            const res = await fetch(`/tweets/liked/${id}`, {
+                method: 'POST'
+            });
+            return res.json();
+        }
+    </script>
 </div>
 
 

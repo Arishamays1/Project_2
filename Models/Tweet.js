@@ -6,6 +6,10 @@ const tweetSchema = new mongoose.Schema({
         ref: 'Profile',
         required: [true, 'you need a Twitter handle']
     },
+    tweetLikes: {
+        type: Number,
+        default: 0
+    },
     text: {
         type: String,
         required: [true, 'you need text']

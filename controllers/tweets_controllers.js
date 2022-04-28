@@ -90,4 +90,25 @@ router.delete('/:id', async (req, res, next) => {
     }
 })
 
+// route for likes on index page
+router.post('/liked/:id', async (req, res, next) => {
+    try {
+        const tweet = await db.Tweet.findById(req.params.id);
+        if (tweet) {
+            tweet.tweetLikes += 1;
+            await db.Tweet.findByIdAndUpdate(req.params.id, {tweetLikes: tweet.tweetLikes});
+            res.redirect('/tweets');
+        }
+        else {
+            // Throw 404 Tweet Not Found
+        }
+    }
+    catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+
 module.exports = router;
