@@ -40,7 +40,9 @@
             <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
             <h3><%= comments[i].text %></h3>
             <h4><%= comments[i].createdAt %></h4>
-       
+            <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
+                <button type="submit">Delete Comment</button>
+            </form>
         <%}%>
     </div>
 
