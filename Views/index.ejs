@@ -17,11 +17,15 @@
     <div class="timeline">
         <% for (let i = 0; i < tweet.length; i++) { %>
            <% const oneTweet = tweet[i] %>
+           
            <div class="tweet">
+            <!-- ----PROFILE SHOW ROUTE---- -->
             <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
-               <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
-               <h4><%= oneTweet.createdAt %></h4>
+            <!-- ----TWEET SHOW ROUTE---- -->
+            <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
+            <h4><%= oneTweet.createdAt %></h4>
            </div>
+           
         <% } %>
     </div>
     
