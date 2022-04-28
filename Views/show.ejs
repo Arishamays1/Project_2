@@ -5,6 +5,7 @@
 
 <body>
     <div class="showPage">
+
     <div class="showNav">
         <%- include('partials/nav.ejs')%>
     </div>
@@ -34,16 +35,20 @@
         </form>
     </div>
 
-    <div class="showComment">
-        <!-- ADD THE COMMENT SECTION HERE -->
-        <%for(let i = 0; i < comments.length; i++){%>
-            <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
-            <h3><%= comments[i].text %></h3>
-            <h4><%= comments[i].createdAt %></h4>
-            <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
-                <button type="submit">Delete Comment</button>
-            </form>
-        <%}%>
+    <div class="commentTimeline">
+        <div class="showComment">
+            <!-- ADD THE COMMENT SECTION HERE -->
+            <%for(let i = 0; i < comments.length; i++){%>
+                <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
+                <h3><%= comments[i].text %></h3>
+                <h4><%= comments[i].createdAt %></h4>
+                <div class="showPageDeleteComment">
+                    <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
+                        <button type="submit">Delete Comment</button>
+                    </form>
+                </div>
+            <%}%>
+        </div>
     </div>
 
     </div>
