@@ -9,7 +9,7 @@ router.get('/:id', async (req, res, next) => {
     try {
     const foundProfile = await db.Profile.findById(req.params.id)
     console.log(foundProfile)
-    const foundTweets = await db.Tweet.find({handle: req.params.id}).populate('handle')
+    const foundTweets = await db.Tweet.find({handle: req.params.id})
     console.log(foundTweets)
     const context = {
         oneProfile: foundProfile,
