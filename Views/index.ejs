@@ -15,7 +15,7 @@
     </div>
 
     <div class="timeline">
-        <% for (let i = 0; i < tweet.length; i++) { %>
+        <% for (let i = tweet.length - 1; i >= 0; i--) { %>
            <% const oneTweet = tweet[i] %>
            
            <div class="tweet">

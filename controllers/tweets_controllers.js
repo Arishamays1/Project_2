@@ -17,10 +17,10 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-//-------NEW TWEET ROUTE-----------
-// router.get('/newtweet', (req, res) => {
-//     res.render('new')
-// })
+// -------NEW TWEET ROUTE-----------
+router.get('/newtweet', (req, res) => {
+    res.render('new')
+})
 
 //------SHOW TWEET ROUTE----------
 router.get('/:id', async (req, res, next) => {
