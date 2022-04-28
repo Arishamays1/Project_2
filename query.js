@@ -1,18 +1,21 @@
 // DB CONNECTION
 require('./config/db.connection.js')
 
+const { Profile } = require('./models/index.js')
 // REQUIRING
 const Tweet = require('./models/Tweet')
 const Comment = require('./models/Comment')
 
 //---------CREATE METHOD-----------
-// Tweet.create(
-//     {
-//     handle: "",
-//     text: ""
-// })
+Tweet.create(
+    {
+        handle: "jeffreygreen",
+        text: "Hello, this is my third tweet"
+    }
+)
 
-Comment.create({
-    handle: "pigwittajig",
-    text: "I concur."
-})
+Profile.create(
+    {
+        handle: "jeffreygreen"
+    }
+)

@@ -6,7 +6,7 @@ const db = require('../models')
 //---------ALL TWEETS ROUTE--------
 router.get('/', async (req, res, next) => {
     try {
-        const tweet = await db.Tweet.find({});
+        const tweet = await db.Tweet.find({}).populate("handle");
         const context = {tweet}
         console.log(tweet);
         return res.render('index.ejs', context);

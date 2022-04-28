@@ -20,6 +20,7 @@ app.use('/tweets', controllers.tweets)
 app.use('/comments', controllers.comments)
 app.use('/profiles', controllers.profiles)
 
+
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
     res.send(`Welcome to Elon Musk's Twitter!`)
