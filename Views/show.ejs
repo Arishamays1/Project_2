@@ -20,6 +20,7 @@
     </div>
 
     <div>
+       
         <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
             <input name="text" placeholder="Your thoughts?"/>
@@ -33,7 +34,7 @@
         <%for(let i =0; i< comments.length; i++){%>
             <h2>@<%=comments[i].handle%></h2>
             <h3><%= comments[i].text %></h3>
-        <h4><%= comments[i].createdAt %></h4>
+        <h4><%=comments[i].createdAt %></h4>
         <%}%>
     </div>
 
