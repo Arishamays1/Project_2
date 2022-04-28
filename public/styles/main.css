@@ -62,7 +62,12 @@ body {
 }
 
 .showComment {
-    margin: 5% auto;
+    margin: 5% auto;    
+}
+
+.showPageDeleteComment {
+    text-align: center;
+    margin-bottom: 2%;
 }
 
 /* ----SHOW PROFILE PAGE STYLING---- */
