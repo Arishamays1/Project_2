@@ -17,7 +17,7 @@
     <div class="showTweet">
         <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
         <h3><%= oneTweet.text %></h3>
-        <h4><%= oneTweet.createdAt %></h4>
+        <h4 style="color:red;"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
     </div>
 
     <div class="showPageDeleteTweet">
@@ -39,9 +39,10 @@
         <div class="showComment">
             <!-- ADD THE COMMENT SECTION HERE -->
             <%for(let i = 0; i < comments.length; i++){%>
+                <%const time=comments[i].createdAt.toString().substring(0, 24)%>
                 <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
                 <h3><%= comments[i].text %></h3>
-                <h4><%= comments[i].createdAt %></h4>
+                <h4 style="color: red; font-size: smaller;"><%= time %></h4>
                 <div class="showPageDeleteComment">
                     <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
                         <button type="submit">Delete Comment</button>
@@ -54,4 +55,5 @@
     </div>
     
 </body>
+
 </html>

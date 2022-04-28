@@ -24,7 +24,7 @@
             <div class="profileTweets">
                 <h2>@<%= oneProfile.handle %></h2>
                 <h3><%= profileTweets[i].text %></h3>
-                <h4><%= profileTweets[i].createdAt %></h4>
+                <h4 style="color:red;"><%= profileTweets[i].createdAt.toString().substring(0, 24) %></h4>
                 <% } %>
             </div>
             
