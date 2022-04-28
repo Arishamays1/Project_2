@@ -24,21 +24,35 @@
                <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
            </div>
         <% } %>
-    </div>
-    </div>
-    <script type="text/javascript" defer>
-        const likeButtons = document.querySelectorAll(".likes")
-        likeButtons.forEach(button => {
-            button.addEventListener("click", function click() {
+        <script type="text/javascript">
+            const likeButtons = document.querySelectorAll(".likes")
+            for (let i = 0; i < likeButtons.length; i++) {
+                const button = likeButtons.item(i);
+                button.addEventListener("click", function(){ postLike(button.id) })
+            }
             async function postLike(id) {
-                const response = await fetch(`/tweets/liked/${id}`, {
+                const res = await fetch(`/tweets/liked/${id}`, {
                     method: 'POST'
                 });
-                return response.json();
-            }  
-        })
-        })
-    </script>
+                return res.json();
+            }
+        </script>
+    </div>
+    </div>
 </body>
 </html>
+
+<!-- <script type="text/javascript" defer>
+    const likeButtons = document.querySelectorAll(".likes")
+    likeButtons.forEach(button => {
+        button.addEventListener("click", function click() {
+        async function postLike(id) {
+            const response = await fetch(`/tweets/liked/${id}`, {
+                method: 'POST'
+            });
+            return response.json();
+        }  
+    })
+    })
+</script> -->
 
