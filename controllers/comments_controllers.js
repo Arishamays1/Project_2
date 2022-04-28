@@ -49,9 +49,9 @@ router.post('/new',async (req, res)=>{
 router.delete('/:commentId', async (req,res, next)=>{
     // res.send('hitting review delete: '+req.params.reviewId)
     try{
-       const deleteReview = await db.Comment.findByIdAndDelete(req.params.reviewId)
-       console.log(deleteComment.id, "<<comment |",deleteComment.tweet,"<<product") 
-       res.redirect('/tweets/'+deleteComment.tweet)
+       const deletedComment = await db.Comment.findByIdAndDelete(req.params.commentId)
+       console.log(deletedComment.id, "<<comment |",deletedComment.tweet,"<<tweet") 
+       res.redirect(`/tweets/${deletedComment.tweet}`)
     }catch(error){
         console.log(error);
         req.error = error;
