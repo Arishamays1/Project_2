@@ -2,7 +2,6 @@
 <html lang="en">
 
     <%- include('partials/head.ejs') %>
-    <%- include('functions.ejs') %>
 
 <body>
     <div class="indexPage">
@@ -22,11 +21,18 @@
                <h2> @<%= oneTweet.handle %></h2> 
                <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
                <h4><%= oneTweet.createdAt %></h4>
-               <button type = "button" class = "likes" onclick ='<%= liked(oneTweet) %>'>Like</button>
+               <button type="button" class="likes" onclick="postLike()">Like: <%= oneTweet.tweetLikes %></button>
+               <script type="text/javascript">
+                   async function postLike() {
+                    const response = await fetch('/tweets/liked/<%= oneTweet._id %>', {
+                        method: 'POST'
+                    });
+                    return response.json();
+                   }   
+               </script>
            </div>
         <% } %>
     </div>
-    
-</div>
+    </div>
 </body>
 </html>

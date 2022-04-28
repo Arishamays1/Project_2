@@ -7,7 +7,7 @@ const db = require('../models')
 router.get('/', async (req, res, next) => {
     try {
         const tweet = await db.Tweet.find({});
-        const context = {tweet}
+        const context = {tweet: tweet}
         console.log(tweet);
         return res.render('index.ejs', context);
     } catch (error) {
@@ -45,6 +45,20 @@ router.post('/', async (req, res, next) => {
         console.log(`The created tweet is ${createdTweet}`)
         res.redirect('/tweets');
     } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+router.post('/liked/:id', async (req, res, next) => {
+    try {
+        const tweet = await db.Tweet.findById(req.params.id);
+        tweet.tweetLikes += 1;
+        await db.Tweet.findByIdAndUpdate(req.params.id, {tweetLikes: tweet.tweetLikes});
+        res.redirect('/tweets');
+    }
+    catch (error) {
         console.log(error);
         req.error = error;
         return next();
