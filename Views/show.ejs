@@ -32,9 +32,9 @@
     <div class="showComment">
         <!-- ADD THE COMMENT SECTION HERE -->
         <%for(let i = 0; i < comments.length; i++){%>
-            <h2>@<%=comments[i].handle%></h2>
+            <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
             <h3><%= comments[i].text %></h3>
-            <h4><%=comments[i].createdAt %></h4>
+            <h4><%= comments[i].createdAt %></h4>
        
         <%}%>
     </div>

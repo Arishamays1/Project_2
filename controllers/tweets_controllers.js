@@ -27,7 +27,7 @@ router.get('/:id', async (req, res, next) => {
     try {
     const foundTweet = await db.Tweet.findById(req.params.id).populate("handle")
     console.log(foundTweet)
-    const allComments= await db.Comment.find({tweet:req.params.id})
+    const allComments= await db.Comment.find({tweet:req.params.id}).populate("handle")
     const context = {
         oneTweet: foundTweet,
         message: 'I am the show route',
