@@ -51,6 +51,32 @@ body {
     margin: 5% auto;
 }
 
+.showComment {
+    margin: 5% auto;
+}
+
+/* ----SHOW PROFILE PAGE STYLING---- */
+.showHandleNav {
+    text-align: center;
+}
+
+.showHandleHeader {
+    text-align: center;
+}
+
+.showProfile {
+    text-align: center;
+    margin: 5% auto;
+}
+
+.profileTweetsSection {
+    margin: 5% auto;
+}
+
+.profileTweets {
+    margin: 5% auto;
+}
+
 /* ----NEW PAGE STYLING---- */
 .newNav {
     text-align: center;
@@ -63,3 +89,4 @@ body {
 .newTweet {
     margin: 5% auto;
 }
+

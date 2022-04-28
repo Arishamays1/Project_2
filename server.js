@@ -28,5 +28,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`listening to ${PORT}`)
+    console.log(`listening to port: ${PORT}`)
 })
