@@ -14,7 +14,7 @@
     </div>
 
     <div class="showTweet">
-        <h2> @<%= oneTweet.handle.handle %></h2>
+        <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
         <h3><%= oneTweet.text %></h3>
         <h4><%= oneTweet.createdAt %></h4>
     </div>
