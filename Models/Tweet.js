@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const tweetSchema = new mongoose.Schema({
     handle: { 
-        type: String, 
+        type: mongoose.Types.ObjectId, 
+        ref: "Profile",
         required: [true, 'you need a Twitter handle']
     },
     text: {
@@ -14,7 +15,7 @@ const tweetSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    // timestamps: true
+    // timestamps: true,
 })
 
 const Tweet = mongoose.model('Tweet', tweetSchema);
