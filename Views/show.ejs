@@ -19,8 +19,13 @@
         <h4><%= oneTweet.createdAt %></h4>
     </div>
 
-    <div>
-       
+    <div class="showPageDeleteTweet">
+        <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
+            <button type="submit">Delete Tweet</button>
+        </form>
+    </div>
+
+    <div class="showPageCommentForm">
         <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
             <input name="text" placeholder="Your thoughts?"/>

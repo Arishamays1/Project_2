@@ -41,6 +41,7 @@ router.get('/:id', async (req, res, next) => {
     }
 })
 
+// -------POST TWEET ROUTE-------
 router.post('/', async (req, res, next) => {
     try {
         // console.log(`The req.body is ${req.body}`)
@@ -54,6 +55,7 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+// ------POST COMMENT ROUTE ON TWEET PAGE------
 router.post('/:id', async (req, res, next) => {
     try {
         // console.log(`The req.body is ${req.body}`)
@@ -70,6 +72,21 @@ router.post('/:id', async (req, res, next) => {
         console.log(error);
         req.error = error; 
         return next();
+    }
+})
+
+// -------DELETE TWEET ROUTE-------
+router.delete('/:id', async (req, res, next) => {
+    try {
+        const deletedTweet = await db.Tweet.findByIdAndDelete(req.params.id)
+        if (deletedTweet) {
+            console.log(deletedTweet._id, 'deleted')
+            res.redirect(`/tweets/`)
+        } else {
+            res.redirect(`/tweets/${req.params.id}`)
+        }
+    } catch (error) {
+        next(new Error(error.message))
     }
 })
 

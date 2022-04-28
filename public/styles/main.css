@@ -51,6 +51,16 @@ body {
     margin: 5% auto;
 }
 
+.showPageDeleteTweet {
+    text-align: center;
+    margin: 5% auto;
+}
+
+.showPageCommentForm {
+    text-align: center;
+    margin: 5% auto;
+}
+
 .showComment {
     margin: 5% auto;
 }
