@@ -32,9 +32,13 @@
     <div class="showComment">
         <!-- ADD THE COMMENT SECTION HERE -->
         <%for(let i =0; i< comments.length; i++){%>
-            <h2>@<%=comments[i].handle%></h2>
-            <h3><%= comments[i].text %></h3>
-        <h4><%=comments[i].createdAt %></h4>
+            <%const time=comments[i].createdAt.toString().substring(0, 11)%>
+            <%console.log(time)%>
+            <h2><%=comments[i].handle%></h2>
+            <h3 style=><%= comments[i].text %></h3>
+        <h4 style="color: red; font-size: smaller;"><%= time %></h4>
+
+       
         <%}%>
     </div>
 

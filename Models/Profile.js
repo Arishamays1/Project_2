@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const profileSchema = new mongoose.Schema({
     handle: { 
-        type: String, 
+        type: String,
         required: [true, 'you need a Twitter handle']
     },
     image: String,

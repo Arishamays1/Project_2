@@ -22,7 +22,7 @@
     <div class="profileTweetsSection">
         <% for (let i =0; i < profileTweets.length; i++) { %>
             <div class="profileTweets">
-                <h2>@<%= profileTweets[i].handle %></h2>
+                <h2>@<%=profileTweets[i].handle %></h2>
                 <h3><%= profileTweets[i].text %></h3>
                 <h4><%= profileTweets[i].createdAt %></h4>
                 <% } %>
