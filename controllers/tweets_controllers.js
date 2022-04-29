@@ -41,6 +41,23 @@ router.get('/:id', async (req, res, next) => {
     }
 })
 
+// -------EDIT TWEET ROUTE-------
+router.get('/:id/edit', async (req,res, next)=>{
+    try {
+        const updatedTweet = await db.Tweet.findById(req.params.id);
+        console.log(updatedTweet);
+        const context = {
+            tweet: updatedTweet
+        }
+        return res.render('edit.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+
 // -------POST TWEET ROUTE-------
 router.post('/', async (req, res, next) => {
     try {
@@ -87,6 +104,19 @@ router.delete('/:id', async (req, res, next) => {
         }
     } catch (error) {
         next(new Error(error.message))
+    }
+})
+
+// ------ UPDATE/PUT ROUTE-------
+router.put('/:id', async (req, res, next)=>{
+    try {
+        const updatedTweet = await db.Tweet.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updatedTweet);
+        return res.redirect(`/tweets/${req.params.id}`)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
     }
 })
 
