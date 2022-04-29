@@ -142,11 +142,15 @@ a {
 }
 
 button{
-    border:1px solid #42a5f5 ;
+    border:1px solid #5fb5fc ;
     border-radius: 4px;
-    background-color: #42a5f5;
+    background-color: #5fb5fc;
+    opacity: .8;
 }
-
+button:hover{
+   background-color: #7fc4fd;
+   opacity: 1;
+}
 .tweethandle{
 padding: 6px;
 font-size: 15px;
