@@ -21,15 +21,30 @@
 
     <div class="profileTweetsSection">
         <% for (let i =0; i < profileTweets.length; i++) { %>
+            <% const profile = profileTweets[i] %>
             <div class="profileTweets">
                 <h2>@<%= oneProfile.handle %></h2>
-                <h3><a href="/tweets/<%= profileTweets[i]._id %>"><%= profileTweets[i].text %></a></h3>
-                <h4 style="color:red;"><%= profileTweets[i].createdAt.toString().substring(0, 24) %></h4>
+                <h3><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
+                <h4 style="color:red;"><%= profile.createdAt.toString().substring(0, 24) %></h4>
+                <button type= "button" class= "likes" id="<%= profile._id %>">Like: <%= profile.tweetLikes %></button>
                 <% } %>
             </div>
             
     </div>
         
     </div>
-
+    <!-- like request -->
+    <script type="text/javascript">
+        const likeButtons = document.querySelectorAll(".likes")
+        for (let i = 0; i < likeButtons.length; i++) {
+            const button = likeButtons.item(i);
+            button.addEventListener("click", function(){ postLike(button.id); })
+        }
+        async function postLike(id) {
+            const res = await fetch(`/profiles/liked/${id}`, {
+                method: 'POST'
+            });
+            return res.json();
+        }
+    </script>
 </body>
