@@ -36,7 +36,7 @@
     <div class="showPageCommentForm">
         <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
-            <input name="text" placeholder="Your thoughts?"/>
+            <input name="text" placeholder="Your thoughts?" maxlength="250"/>
             <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
             <input type="submit" value="Submit Comment"/>
         </form>
