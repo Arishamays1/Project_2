@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head.ejs') %>
+
+<body>
+    <div class="editPage">
+
+    <div class="editNav">
+        <%- include('partials/nav.ejs')%>
+    </div>
+
+    <div class="editHeader">
+        <h1>Edit Tweet | <%= tweet.handle._id %></h1>
+    </div>
+
+    <div class="editTweetForm">
+        <form method="POST" action="/tweets/<%= tweet._id %>?_method=PUT">
+            <div>
+                <label>Handle</label>
+                <input type="text" name="handle" value="<%= tweet.handle.handle%>"/>
+            </div>
+            <div>
+                <label>Tweet</label>
+                <input type="text" name="text" value="<%= tweet.text%>"/>
+            </div>
+            <div>
+                <input type="submit" value="Update Tweet"/>
+            </div>
+        </form>
+    </div>
