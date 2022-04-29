@@ -19,11 +19,15 @@
         <h3><%= oneTweet.text %></h3>
         <h4 style="color:red;"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
     </div>
-
-    <div class="showPageDeleteTweet">
-        <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
-            <button type="submit">Delete Tweet</button>
-        </form>
+    <div class="showPageEditDeleteSection">
+        <div class="showPageEditTweet">
+            <a href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a>
+        </div>
+        <div class="showPageDeleteTweet">
+            <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
+                <button class="showPageDeleteTweetButton" type="submit">Delete Tweet</button>
+            </form>
+        </div>
     </div>
 
     <div class="showPageCommentForm">

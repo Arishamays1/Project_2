@@ -51,9 +51,27 @@ body {
     margin: 5% auto;
 }
 
-.showPageDeleteTweet {
+.showPageEditDeleteSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
     margin: 5% auto;
+}
+
+.showPageEditTweet {
+    background-color: skyblue;
+    margin: auto 2%;
+}
+
+.showPageDeleteTweet {
+    margin: auto 2%;
+}
+
+.showPageDeleteTweetButton {
+    background: none;
+    background-color: skyblue;
+    border: none;
 }
 
 .showPageCommentForm {
