@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,10 +31,20 @@ body {
 /* HOME PAGE STYLING */
 .homePageTitle {
     margin: 150% auto;
+    text-align: center;
 }
 
-.homePageTitleText {
-    font-size: 150%;
+.homePageElonMusk {
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 400;
+    font-size: 250%;
+}
+
+.homePageTwitter {
+    color: #8eccff;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 700;
+    font-size: 475%;
 }
 
 a {
@@ -122,7 +134,6 @@ a {
 .tweet {
     margin: 5% auto;
     border-top: solid 2px #42a5f5;
-    border-radius: 5px;
     padding: 8px 0 0 0;
 }
 
