@@ -19,12 +19,12 @@
            <% const oneTweet = tweet[i] %>
            <div class="tweet">
             <!-- ----PROFILE SHOW ROUTE---- -->
-            <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
+            <h2 class="tweethandle">@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
             <!-- ----TWEET SHOW ROUTE---- -->
-            <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
+            <h3 class="tweettext"><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
                 <div class="indexTimeLikeSection">
                     <div class="indexTimeStamp">
-                        <h4 style="color:red"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+                        <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
                     </div>
                     <div class="likeButton">
                         <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
