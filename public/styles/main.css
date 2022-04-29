@@ -34,6 +34,9 @@ body {
     text-align: center;
 }
 
+.timeline {
+    margin: 10% auto;
+}
 .tweet {
     margin: 5% auto;
 }
@@ -44,6 +47,11 @@ body {
 }
 
 .showHeader {
+    text-align: center;
+}
+
+.showTweetProfileName {
+    margin: 5% auto;
     text-align: center;
 }
 
@@ -97,8 +105,13 @@ body {
     text-align: center;
 }
 
+.editProfileName {
+    margin: 10% auto;
+    text-align: center;
+}
+
 .editTweetForm {
-    margin: 5% auto;
+    margin: 10% auto;
     text-align: center;
 }
 
@@ -118,11 +131,11 @@ body {
 
 .showProfile {
     text-align: center;
-    margin: 5% auto;
+    margin: 7% auto;
 }
 
 .profileTweetsSection {
-    margin: 5% auto;
+    margin: 7% auto;
 }
 
 .profileTweets {
@@ -139,6 +152,6 @@ body {
 }
 
 .newTweet {
-    margin: 5% auto;
+    margin: 10% auto;
 }
 

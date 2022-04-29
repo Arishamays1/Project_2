@@ -1,7 +1,8 @@
 const express = require('express');
 const { Tweet } = require('../models');
 const router = express.Router();
-const db = require('../models')
+const db = require('../models');
+const { populate } = require('../models/Tweet');
 
 //---------ALL TWEETS ROUTE--------
 router.get('/', async (req, res, next) => {
@@ -44,7 +45,7 @@ router.get('/:id', async (req, res, next) => {
 // -------EDIT TWEET ROUTE-------
 router.get('/:id/edit', async (req,res, next)=>{
     try {
-        const updatedTweet = await db.Tweet.findById(req.params.id);
+        const updatedTweet = await db.Tweet.findById(req.params.id).populate("handle");
         console.log(updatedTweet);
         const context = {
             tweet: updatedTweet
