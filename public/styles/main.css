@@ -24,6 +24,59 @@ body {
     justify-content: center;
 }
 
+/* ----REGISTER PAGE STYLING---- */
+.registerHeader {
+    text-align: center;
+}
+
+.registerTitle {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.registerForm {
+    margin: 5% auto;
+}
+
+.registerHandle {
+    margin: 5% auto;
+}
+
+.registerEmail {
+    margin: 5% auto;
+}
+
+.registerPassword {
+    margin: 5% auto;
+}
+
+.registerSubmit {
+    margin: 5% auto;
+    text-align: center;
+}
+
+/* ----LOGIN PAGE STYLING---- */
+.loginHeader {
+    text-align: center;
+}
+
+.loginTitle {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.loginForm {
+    margin: 5% auto;
+}
+
+.loginEmail {
+    margin: 5% auto;
+}
+
+.loginSubmit {
+    margin: 5% auto;
+    text-align: center;
+}
 
 /* ----INDEX PAGE STYLING---- */
 .indexNav {
