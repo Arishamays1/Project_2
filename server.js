@@ -40,7 +40,7 @@ app.use('/', controllers.auth)
 
 //-----------ROUTING-----------
 app.get('/', (req, res) => {
-    res.send(`Welcome to Elon Musk's Twitter!`)
+    res.render('home.ejs')
 })
 
 
