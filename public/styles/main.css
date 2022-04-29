@@ -24,8 +24,14 @@ time, mark, audio, video {
 body {
     background-color: #030825;
     color: aliceblue;
+    font-family: 'Radio Canada', sans-serif;
     display: flex;
     justify-content: center;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
 }
 
 /* HOME PAGE STYLING */
@@ -47,13 +53,9 @@ body {
     font-size: 475%;
 }
 
-a {
-    color: aliceblue;
-    text-decoration: none;
-}
-
 /* ----REGISTER PAGE STYLING---- */
 .registerHeader {
+    font-weight: 700;
     text-align: center;
 }
 
@@ -64,6 +66,10 @@ a {
 
 .registerForm {
     margin: 5% auto;
+}
+
+.control {
+    text-align: center;
 }
 
 .registerHandle {
@@ -83,8 +89,13 @@ a {
     text-align: center;
 }
 
+.registerSubmitButton {
+    color: aliceblue;
+}
+
 /* ----LOGIN PAGE STYLING---- */
 .loginHeader {
+    font-weight: 700;
     text-align: center;
 }
 
@@ -101,6 +112,10 @@ a {
     margin: 5% auto;
 }
 
+.loginPassword {
+    margin: 5% auto;
+}
+
 .loginButtons {
     display: flex;
     flex-direction: row;
@@ -113,22 +128,33 @@ a {
     margin: auto 5%;
 }
 
+.loginBackButton {
+    color: aliceblue;
+}
+
 .loginSubmit {
     margin: auto 5%;
 }
 
+.loginSubmitButton {
+    color: aliceblue
+}
+
 /* ----INDEX PAGE STYLING---- */
 .indexNav {
+    margin: 5% auto;
+    padding-top: 5%;
     text-align: center;
 }
 
 .indexHeader {
+    font-size: 175%;
+    font-weight: 700;
     text-align: center;
 }
 
 .timeline {
     margin: 10% auto;
-
 }
 
 .tweet {
@@ -137,46 +163,49 @@ a {
     padding: 8px 0 0 0;
 }
 
+.tweethandle {
+    margin: 4% auto;
+    font-size: 95%;
+}
+    
+.tweettext {
+    font-size: 115%;
+}
+
 .indexTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 6px;
-    padding-bottom: 0px;
-    padding-right: 6px;
-    padding-left: 6px;
+    margin: 4% auto;
 }
 
-.indexTimeStamp{
-    font-size: 14px;
-    color: aliceblue
+.indexTimeStamp { 
+    color: aliceblue;
+    font-size: 80%;
 }
 
-button{
-    border:1px solid #5fb5fc ;
+button {
+    border: 1px solid #5fb5fc ;
     border-radius: 4px;
     background-color: #5fb5fc;
     opacity: .8;
 }
+
 button:hover{
    background-color: #7fc4fd;
    opacity: 1;
 }
-.tweethandle{
-padding: 6px;
-font-size: 15px;
-}
-
-.tweettext{
-    font-size: 20px;
-}
 
 /* ----SHOW TWEET PAGE STYLING---- */
 .showNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .showHeader {
+    font-size: 165%;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -187,12 +216,24 @@ font-size: 15px;
 
 .showTweet {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
+    border-bottom: solid 2px #42a5f5;
+}
+
+.tweethandle {
+    margin: 4% auto;
+    font-size: 95%;
+}
+    
+.tweettext {
+    font-size: 115%;
 }
 
 .showTweetTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 4% auto;
 }
 
 .showPageEditDeleteSection {
@@ -233,6 +274,10 @@ font-size: 15px;
     margin: 5% auto;    
 }
 
+.commentTime {
+    margin: 4% auto;
+}
+
 .showPageDeleteComment {
     text-align: center;
     margin-bottom: 2%;
@@ -240,15 +285,19 @@ font-size: 15px;
 
 /* ----EDIT PAGE STYLING---- */
 .editNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .editHeader {
+    font-size: 170%;
+    font-weight: 700;
     text-align: center;
 }
 
 .editProfileName {
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
 }
 
@@ -264,17 +313,21 @@ font-size: 15px;
 
 /* ----SHOW PROFILE PAGE STYLING---- */
 .showHandleNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .showHandleHeader {
+    font-size: 165%;
+    font-weight: 700;
     text-align: center;
 }
 
 .showProfile {
     text-align: center;
     margin: 7% auto;
-    font-size: 25px;
+    font-size: 125%;
 }
 
 .profileTweetsSection {
@@ -283,12 +336,14 @@ font-size: 15px;
 
 .profileTweets {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
 }
 
 .profileTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 4% auto;
 }
 .profileHandle{
     font-size: 15px;
@@ -303,14 +358,20 @@ font-size: 15px;
 
 /* ----NEW PAGE STYLING---- */
 .newNav {
+    margin: 4% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .newHeader {
+    font-size: 160%;
+    font-weight: 700;
     text-align: center;
 }
 
 .newTweet {
     margin: 10% auto;
 }
+
+
 

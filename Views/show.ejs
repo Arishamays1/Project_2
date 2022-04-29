@@ -18,11 +18,11 @@
     </div>
 
     <div class="showTweet">
-        <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
-        <h3><%= oneTweet.text %></h3>
+        <h2 class="tweethandle">@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
+        <h3 class="tweettext"><%= oneTweet.text %></h3>
         <div class="showTweetTimeLikeSection">
             <div class="showTweetTimeStamp">
-                <h4 style="color:red;"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+                <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
             </div>
             <div class="showTweetLikeButton">
                 <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
@@ -54,9 +54,9 @@
             <!-- ADD THE COMMENT SECTION HERE -->
             <%for(let i = 0; i < comments.length; i++){%>
                 <%const time=comments[i].createdAt.toString().substring(0, 24)%>
-                <h2>@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
-                <h3><%= comments[i].text %></h3>
-                <h4><%= time %></h4>
+                <h2 class="tweethandle">@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
+                <h3 class="tweetext"><%= comments[i].text %></h3>
+                <h4 class="commentTime"><%= time %></h4>
                 <div class="showPageDeleteComment">
                     <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
                         <button type="submit">Delete Comment</button>

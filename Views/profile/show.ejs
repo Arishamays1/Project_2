@@ -23,8 +23,8 @@
         <% for (let i =0; i < profileTweets.length; i++) { %>
             <% const profile = profileTweets[i] %>
             <div class="profileTweets">
-                <h2 class="profileHandle">@<%= oneProfile.handle %></h2>
-                <h3 class="profileText"><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
+                <h2 class="tweethandle">@<%= oneProfile.handle %></h2>
+                <h3 class="tweettext"><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
                 <div class="profileTimeLikeSection">
                     <div class="profileTimeStamp">
                         <h4 profileTime><%= profile.createdAt.toString().substring(0, 24) %></h4>
