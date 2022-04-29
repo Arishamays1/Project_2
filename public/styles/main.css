@@ -116,15 +116,44 @@ a {
 
 .timeline {
     margin: 10% auto;
+
 }
+
 .tweet {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
+    border-radius: 5px;
+    padding: 8px 0 0 0;
 }
 
 .indexTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.indexTimeStamp{
+    font-size: 14px;
+    color: aliceblue
+}
+
+button{
+    border:1px solid #42a5f5 ;
+    border-radius: 4px;
+    background-color: #42a5f5;
+}
+
+.tweethandle{
+padding: 6px;
+font-size: 15px;
+}
+
+.tweettext{
+    font-size: 20px;
 }
 
 /* ----SHOW TWEET PAGE STYLING---- */
@@ -230,6 +259,7 @@ a {
 .showProfile {
     text-align: center;
     margin: 7% auto;
+    font-size: 25px;
 }
 
 .profileTweetsSection {
@@ -244,6 +274,16 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.profileHandle{
+    font-size: 15px;
+}
+.profileText{
+    font-size: 20px;
+}
+.profileTime{
+    font-size: 14px;
+    color: aliceblue
 }
 
 /* ----NEW PAGE STYLING---- */
