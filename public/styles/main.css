@@ -88,6 +88,25 @@ body {
     margin-bottom: 2%;
 }
 
+/* ----EDIT PAGE STYLING---- */
+.editNav {
+    text-align: center;
+}
+
+.editHeader {
+    text-align: center;
+}
+
+.editTweetForm {
+    margin: 5% auto;
+    text-align: center;
+}
+
+.updateButton {
+    margin: 3% auto;
+    text-align: center;
+}
+
 /* ----SHOW PROFILE PAGE STYLING---- */
 .showHandleNav {
     text-align: center;
