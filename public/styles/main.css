@@ -173,6 +173,7 @@ a {
 
 .timelineNewTweet {
     margin-bottom: -5%;
+    border: solid 2px #42a5f5;   
 }
 
 .timelineNewHandleSection {
@@ -181,7 +182,7 @@ a {
 
 .timelineNewTweetHandleInput {
     background-color: #010415;
-    border: solid 2px #42a5f5;
+    border-bottom: solid 2px #42a5f5;
     border-left: none;
     border-right: none;
     color: aliceblue;
