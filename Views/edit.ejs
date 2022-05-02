@@ -15,17 +15,17 @@
     </div>
 
     <div class="editProfileName">
-        <h2>@<a href="/profiles/<%= tweet.handle._id %>"><%= tweet.handle.handle %></a></h2>
+        <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= tweet.handle._id %>"><%= tweet.handle.handle %></a></h2>
         
     </div>
 
     <div class="editTweetForm">
         <form method="POST" action="/tweets/<%= tweet._id %>?_method=PUT">
-            <div>
+            <div class="editTweetHandleSection">
                 <label>Handle</label>
                 <input type="text" name="handle" value="<%= tweet.handle.handle%>"/>
             </div>
-            <div>
+            <div class="editTweetTextSection">
                 <label>Tweet</label>
                 <input type="text" name="text" value="<%= tweet.text%>"/>
             </div>

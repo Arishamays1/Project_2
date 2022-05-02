@@ -16,18 +16,18 @@
     </div>
 
     <div class="showProfile">
-        <h2> @<%= oneProfile.handle %></h2>
+        <h2 class="tweethandle"> @<%= oneProfile.handle %></h2>
     </div>
 
     <div class="profileTweetsSection">
         <% for (let i =0; i < profileTweets.length; i++) { %>
             <% const profile = profileTweets[i] %>
-            <div class="profileTweets">
-                <h2>@<%= oneProfile.handle %></h2>
-                <h3><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
+            <div class="profileTweet">
+                <h2 class="tweethandle">@<%= oneProfile.handle %></h2>
+                <h3 class="tweettext"><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
                 <div class="profileTimeLikeSection">
                     <div class="profileTimeStamp">
-                        <h4 style="color:red;"><%= profile.createdAt.toString().substring(0, 24) %></h4>
+                        <h4 profileTime><%= profile.createdAt.toString().substring(0, 24) %></h4>
                     </div>
                     <div class="profileLikeButton">
                         <button type= "button" class= "likes" id="<%= profile._id %>">Like: <%= profile.tweetLikes %></button>

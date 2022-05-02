@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,19 +22,11 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: #030825;
+    background-color: #010415;
     color: aliceblue;
+    font-family: 'Radio Canada', sans-serif;
     display: flex;
     justify-content: center;
-}
-
-/* HOME PAGE STYLING */
-.homePageTitle {
-    margin: 150% auto;
-}
-
-.homePageTitleText {
-    font-size: 150%;
 }
 
 a {
@@ -40,18 +34,45 @@ a {
     text-decoration: none;
 }
 
+/* HOME PAGE STYLING */
+.homePageTitle {
+    margin: 150% auto;
+    text-align: center;
+}
+
+.homePageElonMusk {
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 400;
+    font-size: 250%;
+}
+
+.homePageTwitter {
+    color: #8eccff;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 700;
+    font-size: 475%;
+}
+
 /* ----REGISTER PAGE STYLING---- */
 .registerHeader {
+    font-size: 175%;
+    font-weight: 700;
+    margin-top: 5%;
     text-align: center;
 }
 
 .registerTitle {
+    font-size: 150%;
     margin: 10% auto;
     text-align: center;
 }
 
 .registerForm {
     margin: 5% auto;
+}
+
+.control {
+    text-align: center;
 }
 
 .registerHandle {
@@ -71,12 +92,24 @@ a {
     text-align: center;
 }
 
+.registerSubmitButton {
+    color: aliceblue;
+}
+
+.registerLoginButton {
+    text-align: center;
+}
+
 /* ----LOGIN PAGE STYLING---- */
 .loginHeader {
+    font-size: 175%;
+    font-weight: 700;
+    margin-top: 5%;
     text-align: center;
 }
 
 .loginTitle {
+    font-size: 150%;
     margin: 10% auto;
     text-align: center;
 }
@@ -86,6 +119,10 @@ a {
 }
 
 .loginEmail {
+    margin: 5% auto;
+}
+
+.loginPassword {
     margin: 5% auto;
 }
 
@@ -101,38 +138,153 @@ a {
     margin: auto 5%;
 }
 
+.loginBackButton {
+    color: aliceblue;
+}
+
 .loginSubmit {
     margin: auto 5%;
 }
 
+.loginSubmitButton {
+    color: aliceblue
+}
+
 /* ----INDEX PAGE STYLING---- */
 .indexNav {
+    margin: 5% auto;
+    padding-top: 5%;
     text-align: center;
 }
 
 .indexHeader {
+    font-size: 175%;
+    font-weight: 700;
     text-align: center;
 }
 
 .timeline {
     margin: 10% auto;
+    height: 75vh;
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
 }
+
+.timelineNewTweet {
+    margin-bottom: -5%;
+    border: solid 2px #42a5f5;   
+}
+
+.timelineNewHandleSection {
+    text-align: center;
+}
+
+.timelineNewTweetHandleInput {
+    background-color: #010415;
+    border-bottom: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 2vh;
+    width: 49vw;
+}
+
+.timelineNewTweetTextSection {
+    text-align: center;
+}
+
+.timelineNewTweetTextInput {
+    background-color: #010415;
+    border-color: #42a5f5;
+    border-style: groove;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: aliceblue;
+    font-size: 115%;
+    height: 10vh;
+    width: 49vw;
+}
+
+.timelineNewButtonSection {
+    text-align: center;
+}
+
+.timelineNewButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    margin: 2% auto;
+    text-align: center;
+    opacity: .9;
+}
+
+.timelineNewButton:hover {
+    opacity: 1;
+}
+
 .tweet {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
+    padding: 8px 0 0 0;
+    opacity: .9;
+}
+
+.tweet:hover {
+    opacity: 1;
+}
+
+.tweethandle {
+    color: #CAF0F8;
+    margin: 4% auto;
+    font-size: 95%;
+}
+
+.tweetHandleLink {
+    color: #CAF0F8;
+}
+    
+.tweettext {
+    font-size: 115%;
 }
 
 .indexTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 4% auto;
+}
+
+.indexTimeStamp { 
+    color: #0077B6;
+    font-size: 80%;
+}
+
+button {
+    border: 1px solid #5fb5fc ;
+    border-radius: 4px;
+    background-color: #5fb5fc;
+    opacity: .8;
+}
+
+button:hover{
+   background-color: #7fc4fd;
+   opacity: 1;
 }
 
 /* ----SHOW TWEET PAGE STYLING---- */
 .showNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .showHeader {
+    font-size: 165%;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -143,12 +295,28 @@ a {
 
 .showTweet {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
+    border-bottom: solid 2px #42a5f5;
+}
+
+.tweethandle {
+    margin: 4% auto;
+    font-size: 95%;
+}
+    
+.tweettext {
+    font-size: 115%;
 }
 
 .showTweetTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 4% auto;
+}
+
+.showTweetTimeStamp {
+    color: #0077B6;
 }
 
 .showPageEditDeleteSection {
@@ -165,8 +333,12 @@ a {
 
 .showPageEditButton {
     background: none;
-    background-color: skyblue;
+    background-color: #90E0EF;
     border: none;
+}
+
+.editButton {
+    color: #030825;
 }
 
 .showPageDeleteTweet {
@@ -175,9 +347,9 @@ a {
 
 .showPageDeleteTweetButton {
     background: none;
-    background-color: skyblue;
+    background-color: #90E0EF;
     border: none;
-    color: aliceblue;
+    color: #030825;
 }
 
 .showPageCommentForm {
@@ -185,8 +357,20 @@ a {
     margin: 5% auto;
 }
 
+.showComments {
+    margin: 5% auto;
+}
+
 .showComment {
-    margin: 5% auto;    
+    opacity: .9;
+}
+
+.showComment:hover {
+    opacity: 1;
+}
+
+.commentTime {
+    margin: 4% auto;
 }
 
 .showPageDeleteComment {
@@ -194,17 +378,33 @@ a {
     margin-bottom: 2%;
 }
 
+.showPageSubmitCommentButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    opacity: .8;
+}
+
+.showPageSubmitCommentButton:hover {
+    background-color: #7fc4fd;
+    opacity: 1;
+}
+
 /* ----EDIT PAGE STYLING---- */
 .editNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .editHeader {
+    font-size: 170%;
+    font-weight: 700;
     text-align: center;
 }
 
 .editProfileName {
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
 }
 
@@ -213,49 +413,151 @@ a {
     text-align: center;
 }
 
-.updateButton {
+.editTweetHandleSection {
     margin: 3% auto;
+}
+
+.updateButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    margin: 5% auto;
     text-align: center;
+    opacity: .8;
+}
+
+.updateButton:hover {
+    background-color: #7fc4fd;
+    opacity: 1;
 }
 
 /* ----SHOW PROFILE PAGE STYLING---- */
 .showHandleNav {
+    margin: 5% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .showHandleHeader {
+    font-size: 165%;
+    font-weight: 700;
     text-align: center;
 }
 
 .showProfile {
     text-align: center;
     margin: 7% auto;
+    font-size: 125%;
 }
 
 .profileTweetsSection {
     margin: 7% auto;
 }
 
-.profileTweets {
+.profileTweet {
     margin: 5% auto;
+    border-top: solid 2px #42a5f5;
+    opacity: .9;
+}
+
+.profileTweet:hover {
+    opacity: 1;
 }
 
 .profileTimeLikeSection {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 4% auto;
+}
+.profileHandle {
+    font-size: 15px;
+}
+.profileText {
+    font-size: 20px;
+}
+
+.profileTimeStamp {
+    color: #0077B6;
+}
+.profileTime {
+    font-size: 14px;
 }
 
 /* ----NEW PAGE STYLING---- */
+
 .newNav {
+    margin: 4% auto;
+    padding-top: 4%;
     text-align: center;
 }
 
 .newHeader {
+    font-size: 160%;
+    font-weight: 700;
     text-align: center;
 }
 
 .newTweet {
     margin: 10% auto;
 }
+
+.createNewHandleSection {
+    margin: 3% auto;
+    text-align: center;
+}
+
+.newTweetHandleInput {
+    background-color: #010415;
+    border-style: groove;
+}
+
+.newTweetTextInput {
+    background-color: #010415;
+    border-style: groove;
+}
+
+.createNewTweetTextSection {
+    text-align: center;
+}
+
+.createNewButtonSection {
+    text-align: center;
+}
+
+.createNewButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    margin: 5% auto;
+    text-align: center;
+}
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 600px) {
+
+    .timeline {
+    height: 75vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    }
+
+    .tweet {
+        margin: auto 5%;
+    }
+
+    .profileTweets {
+        margin: auto 5%;
+    }
+
+    .showTweet {
+        margin: auto 5%;
+    }
+
+    .newTweet {
+        margin: 10% 5%;
+    }
+}
+
 
