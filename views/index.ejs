@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 
     <%- include('partials/head.ejs') %>
 
 <body>
-    <div class="indexPage">
-
-    <div class="indexNav">
-        <%- include('partials/nav.ejs')%>
-    </div>
-
-    <div class="indexHeader">
-        <h1>Elon Musk's Twitter</h1>
-    </div>
-
-    <div class="timeline">
-
-        <div class="timelineNewTweet">
-            <form method="POST" action="/tweets">
-                <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
-                <!-- action => destination for the post req -->
-                    <div class="timelineNewHandleSection">
+    <div class = "indexPage">
+        <div class = "indexNav">
+            <%- include('partials/nav.ejs')%>
+        </div>
+        <div class = "indexHeader">
+                <h1>Elon Musk's Twitter</h1>
+        </div>
+        <div class = "timeline">
+            <div class = "timelineNewTweet">
+                <form method = "POST" action = "/tweets">
+                    <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
+                    <!-- action => destination for the post req -->
+                    <div class = "timelineNewHandleSection">
                         <!-- <label for="handle"> Twitter Handle: </label> -->
-                        <input class="timelineNewTweetHandleInput" id="handle" name="handle" type="hidden" placeholder="Twitter Handle" value="<%= profile.id %>" />
+                        <input class = "timelineNewTweetHandleInput" id = "handle" name = "handle" type = "text" placeholder = "Twitter Handle" />
                     </div>
-                    <div class="timelineNewTweetTextSection">
+                    <div class = "timelineNewTweetTextSection">
                         <!-- <label for="text"> What's happening? </label> -->
-                        <input class="timelineNewTweetTextInput" id="text" name="text" type="text" maxlength="250" placeholder="What's Happening?" />
+                        <input class = "timelineNewTweetTextInput" id = "text" name = "text" type = "text" maxlength = "250" placeholder = "What's Happening?" />
                     </div>
                     <div class="timelineNewButtonSection">
-                        <input class="timelineNewButton" type="submit" value="Create new tweet">
+                        <input class = "timelineNewButton" type = "submit" value = "Create new tweet">
                     </div>
-            </form>
-        </div>
-
-        <% for (let i = tweet.length - 1; i >= 0; i--) { %>
-           <% const oneTweet = tweet[i] %>
-           <div class="tweet">
-            <!-- ----PROFILE SHOW ROUTE---- -->
-            <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
-            <!-- ----TWEET SHOW ROUTE---- -->
-            <h3 class="tweettext"><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
-                <div class="indexTimeLikeSection">
-                    <div class="indexTimeStamp">
-                        <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
-                    </div>
-                    <div class="likeButton">
-                        <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
-                    </div>
-                </div>
+                </form>
             </div>
-        <% } %>
+
+            <% for (let i = tweet.length - 1; i >= 0; i--) { %>
+                <% const oneTweet = tweet[i] %>
+                <div class="tweet">
+                    <!-- ----PROFILE SHOW ROUTE---- -->
+                    <h2 class="tweethandle">@<a href = "/profiles/<%= oneTweet.handle._id %>" class = "tweetHandleLink"><%= oneTweet.handle.handle %></a></h2>
+                    <!-- ----TWEET SHOW ROUTE---- -->
+                        <h3 class = "tweettext"><a href = "/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
+                            <div class = "indexTimeLikeSection">
+                                <div class = "indexTimeStamp">
+                                    <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+                                </div>
+                                <div class = "likeButton">
+                                    <button type = "button" class = "likes" id = "<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
+                                </div>
+                            </div>
+                </div>
+            <% } %>
+        </div>
     </div>
+    
     <!-- like request -->
     <script type="text/javascript">
         const likeButtons = document.querySelectorAll(".likes")
@@ -66,8 +64,5 @@
             return res.json();
         }
     </script>
-</div>
-
-
 </body>
 </html>
