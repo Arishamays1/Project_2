@@ -23,5 +23,3 @@ Javascript, CSS, HTML, MongoDB, Mongoose, Express.js
 [Kimberly Baldeo](https://github.com/kimbaldeo)
 [Jeffrey Green](https://github.com/jeffreygreenjr)
 [Arisha Mays](https://github.com/Arishamays1)
-
-***
