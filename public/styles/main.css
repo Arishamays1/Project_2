@@ -22,7 +22,7 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: #030825;
+    background-color: #010415;
     color: aliceblue;
     font-family: 'Radio Canada', sans-serif;
     display: flex;
@@ -55,11 +55,14 @@ a {
 
 /* ----REGISTER PAGE STYLING---- */
 .registerHeader {
+    font-size: 175%;
     font-weight: 700;
+    margin-top: 5%;
     text-align: center;
 }
 
 .registerTitle {
+    font-size: 150%;
     margin: 10% auto;
     text-align: center;
 }
@@ -93,13 +96,20 @@ a {
     color: aliceblue;
 }
 
+.registerLoginButton {
+    text-align: center;
+}
+
 /* ----LOGIN PAGE STYLING---- */
 .loginHeader {
+    font-size: 175%;
     font-weight: 700;
+    margin-top: 5%;
     text-align: center;
 }
 
 .loginTitle {
+    font-size: 150%;
     margin: 10% auto;
     text-align: center;
 }
@@ -164,8 +174,13 @@ a {
 }
 
 .tweethandle {
+    color: #CAF0F8;
     margin: 4% auto;
     font-size: 95%;
+}
+
+.tweetHandleLink {
+    color: #CAF0F8;
 }
     
 .tweettext {
@@ -180,7 +195,7 @@ a {
 }
 
 .indexTimeStamp { 
-    color: aliceblue;
+    color: #0077B6;
     font-size: 80%;
 }
 
@@ -236,6 +251,11 @@ button:hover{
     margin: 4% auto;
 }
 
+.showTweetTimeStamp {
+    color: #0077B6;
+    font
+}
+
 .showPageEditDeleteSection {
     display: flex;
     flex-direction: row;
@@ -250,8 +270,12 @@ button:hover{
 
 .showPageEditButton {
     background: none;
-    background-color: skyblue;
+    background-color: #90E0EF;
     border: none;
+}
+
+.editButton {
+    color: #030825;
 }
 
 .showPageDeleteTweet {
@@ -260,9 +284,9 @@ button:hover{
 
 .showPageDeleteTweetButton {
     background: none;
-    background-color: skyblue;
+    background-color: #90E0EF;
     border: none;
-    color: aliceblue;
+    color: #030825;
 }
 
 .showPageCommentForm {
@@ -283,6 +307,11 @@ button:hover{
     margin-bottom: 2%;
 }
 
+.showPageSubmitCommentButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+}
 /* ----EDIT PAGE STYLING---- */
 .editNav {
     margin: 5% auto;
@@ -306,8 +335,12 @@ button:hover{
     text-align: center;
 }
 
-.updateButton {
+.editTweetHandleSection {
     margin: 3% auto;
+}
+
+.updateButton {
+    margin: 5% auto;
     text-align: center;
 }
 
@@ -345,18 +378,22 @@ button:hover{
     justify-content: space-between;
     margin: 4% auto;
 }
-.profileHandle{
+.profileHandle {
     font-size: 15px;
 }
-.profileText{
+.profileText {
     font-size: 20px;
 }
-.profileTime{
+
+.profileTimeStamp {
+    color: #0077B6;
+}
+.profileTime {
     font-size: 14px;
-    color: aliceblue
 }
 
 /* ----NEW PAGE STYLING---- */
+
 .newNav {
     margin: 4% auto;
     padding-top: 4%;
@@ -371,6 +408,17 @@ button:hover{
 
 .newTweet {
     margin: 10% auto;
+}
+
+.createNewHandleSection {
+    margin: 3% auto;
+}
+
+.createNewButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    margin: 5% auto;
 }
 
 

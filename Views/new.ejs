@@ -18,15 +18,15 @@
         <form method="POST" action="/tweets">
             <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
             <!-- action => destination for the post req -->
-            <div>
-                <label for="handle"> Twitter Handle: </label>
-                <input id="handle" name="handle" type="text" />
-            </div>
-            <div>
-                <label for="text"> What's happening? </label>
-                <input id="text" name="text" type="text" maxlength="250"/>
-            </div>
-            <input type="submit" value="Create new tweet">
+                <div class="createNewHandleSection">
+                    <label for="handle"> Twitter Handle: </label>
+                    <input id="handle" name="handle" type="text" />
+                </div>
+                <div class="createNewTweetTextSection">
+                    <label for="text"> What's happening? </label>
+                    <input id="text" name="text" type="text" maxlength="250"/>
+                </div>
+            <input class="createNewButton" type="submit" value="Create new tweet">
         </form>
     </div>
     </div>

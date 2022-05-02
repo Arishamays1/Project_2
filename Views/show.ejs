@@ -14,11 +14,11 @@
         <h1>Elon Musk's Twitter | Show Tweet</h1>
     </div>
     <div class="showTweetProfileName">
-        <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
+        <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
     </div>
 
     <div class="showTweet">
-        <h2 class="tweethandle">@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
+        <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
         <h3 class="tweettext"><%= oneTweet.text %></h3>
         <div class="showTweetTimeLikeSection">
             <div class="showTweetTimeStamp">
@@ -31,7 +31,7 @@
     </div>
     <div class="showPageEditDeleteSection">
         <div class="showPageEditTweet">
-            <button class="showPageEditButton"><a href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
+            <button class="showPageEditButton"><a class="editButton" href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
         </div>
         <div class="showPageDeleteTweet">
             <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
@@ -45,7 +45,7 @@
             <input name="handle" placeholder="What's your handle?"/>
             <input name="text" maxlength="250" placeholder="Your thoughts?"/>
             <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
-            <input type="submit" value="Submit Comment"/>
+            <input class="showPageSubmitCommentButton" type="submit" value="Submit Comment"/>
         </form>
     </div>
 
@@ -54,7 +54,7 @@
             <!-- ADD THE COMMENT SECTION HERE -->
             <%for(let i = 0; i < comments.length; i++){%>
                 <%const time=comments[i].createdAt.toString().substring(0, 24)%>
-                <h2 class="tweethandle">@<a href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
+                <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
                 <h3 class="tweetext"><%= comments[i].text %></h3>
                 <h4 class="commentTime"><%= time %></h4>
                 <div class="showPageDeleteComment">
