@@ -76,15 +76,41 @@ a {
 }
 
 .registerHandle {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
 }
 
 .registerEmail {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
 }
 
 .registerPassword {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
 }
 
 .registerSubmit {
@@ -119,11 +145,27 @@ a {
 }
 
 .loginEmail {
-    margin: 5% auto;
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
 }
 
 .loginPassword {
-    margin: 5% auto;
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
 }
 
 .loginButtons {
