@@ -1,7 +1,7 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const methodOverride = require('method-override')
-const controllers = require('./controllers')
+const methodOverride = require('method-override');
+const controllers = require('./controllers');
 const PORT = 4000;
 
 // SESSION
@@ -13,10 +13,10 @@ require('./config/db.connection')
 
 
 //---------MIDDLEWARE---------
-app.set('view engine', 'ejs')
-app.use(express.static('public'))
-app.use(methodOverride('_method'))
-app.use(express.urlencoded({extended: false}))
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended: false}));
 
 // SESSION
 app.use(
@@ -32,10 +32,10 @@ app.use(
 )
 
 //--------CONTROLLERS----------
-app.use('/tweets', controllers.tweets)
-app.use('/comments', controllers.comments)
-app.use('/profiles', controllers.profiles)
-app.use('/', controllers.auth)
+app.use('/tweets', controllers.tweets);
+app.use('/comments', controllers.comments);
+app.use('/profiles', controllers.profiles);
+app.use('/', controllers.auth);
 
 
 //-----------ROUTING-----------

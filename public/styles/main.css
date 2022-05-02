@@ -34,7 +34,7 @@ a {
     text-decoration: none;
 }
 
-/* HOME PAGE STYLING */
+/* ----HOME PAGE STYLING----*/
 .homePageTitle {
     margin: 150% auto;
     text-align: center;
@@ -544,7 +544,7 @@ button:hover{
     text-align: center;
 }
 
-/* MOBILE VERSION */
+/* ----MOBILE VERSION---- */
 @media only screen and (max-width: 600px) {
 
     .timeline {
