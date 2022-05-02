@@ -9,10 +9,10 @@ router.get('/', async (req, res, next) => {
     try {
         const tweet = await db.Tweet.find({}).populate("handle");
         const context = {tweet}
-        console.log(tweet);
+        // console.log(tweet); DELETE IN FINAL DRAFT
         return res.render('index.ejs', context);
     } catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error;
         return next();
     }
@@ -26,17 +26,17 @@ router.get('/newtweet', (req, res) => {
 //------SHOW TWEET ROUTE----------
 router.get('/:id', async (req, res, next) => {
     try {
-    const foundTweet = await db.Tweet.findById(req.params.id).populate("handle")
-    console.log(foundTweet)
-    const allComments= await db.Comment.find({tweet:req.params.id}).populate("handle")
+    const foundTweet = await db.Tweet.findById(req.params.id).populate("handle");
+    // console.log(foundTweet)DELETE IN FINAL DRAFT
+    const allComments= await db.Comment.find({tweet:req.params.id}).populate("handle");
     const context = {
         oneTweet: foundTweet,
         message: 'I am the show route',
         comments: allComments,
     }
-    return res.render('show.ejs', context)
+    return res.render('show.ejs', context);
     } catch(error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error;
         return next();
     }
@@ -46,13 +46,13 @@ router.get('/:id', async (req, res, next) => {
 router.get('/:id/edit', async (req,res, next)=>{
     try {
         const updatedTweet = await db.Tweet.findById(req.params.id).populate("handle");
-        console.log(updatedTweet);
+        // console.log(updatedTweet); DELETE IN FINAL DRAFT
         const context = {
             tweet: updatedTweet
         }
         return res.render('edit.ejs', context)
     } catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error;
         return next();
     }
@@ -64,10 +64,10 @@ router.post('/', async (req, res, next) => {
     try {
         // console.log(`The req.body is ${req.body}`)
         const createdTweet = await db.Tweet.create(req.body);
-        console.log(`The created tweet is ${createdTweet}`)
+        // console.log(`The created tweet is ${createdTweet}`) DELETE IN FINAL DRAFT
         res.redirect('/tweets');
     } catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error; 
         return next();
     }
@@ -84,10 +84,10 @@ router.post('/:id', async (req, res, next) => {
             tweet: req.params.id
         }
         const createdComment = await db.Comment.create(commenting);
-        console.log(`The created tweet is ${createdComment}`)
+        // console.log(`The created tweet is ${createdComment}`) DELETE IN FINAL DRAFT
         res.redirect(`/tweets/${req.params.id}`);
     } catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error; 
         return next();
     }
@@ -96,12 +96,12 @@ router.post('/:id', async (req, res, next) => {
 // -------DELETE TWEET ROUTE-------
 router.delete('/:id', async (req, res, next) => {
     try {
-        const deletedTweet = await db.Tweet.findByIdAndDelete(req.params.id)
+        const deletedTweet = await db.Tweet.findByIdAndDelete(req.params.id);
         if (deletedTweet) {
-            console.log(deletedTweet._id, 'deleted')
-            res.redirect(`/tweets/`)
+            // console.log(deletedTweet._id, 'deleted'); DELETE IN FINAL DRAFT
+            res.redirect(`/tweets/`);
         } else {
-            res.redirect(`/tweets/${req.params.id}`)
+            res.redirect(`/tweets/${req.params.id}`);
         }
     } catch (error) {
         next(new Error(error.message))
@@ -112,10 +112,10 @@ router.delete('/:id', async (req, res, next) => {
 router.put('/:id', async (req, res, next)=>{
     try {
         const updatedTweet = await db.Tweet.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updatedTweet);
-        return res.redirect(`/tweets/${req.params.id}`)
+        // console.log(updatedTweet); DELETE IN FINAL DRAFT
+        return res.redirect(`/tweets/${req.params.id}`);
     } catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error;
         return next();
     }
@@ -135,7 +135,7 @@ router.post('/liked/:id', async (req, res, next) => {
         }
     }
     catch (error) {
-        console.log(error);
+        // console.log(error); DELETE IN FINAL DRAFT
         req.error = error;
         return next();
     }
