@@ -44,8 +44,8 @@
 
         <div class="showPageCommentForm">
             <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
-                <input name="handle" placeholder="What's your handle?"/>
-                <input name="text" maxlength="250" placeholder="Your thoughts?"/>
+                <input class="commentHandleForm" name="handle" placeholder="What's your handle?"/>
+                <input class="commentTextForm" name="text" maxlength="250" placeholder="Your thoughts?"/>
                 <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
                 <input class="showPageSubmitCommentButton" type="submit" value="Submit Comment"/>
             </form>
@@ -68,7 +68,7 @@
                     </div>
                 <%}%>
             </div>
-            
+
         </div>
 
     </div>
