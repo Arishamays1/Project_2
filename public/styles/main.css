@@ -275,6 +275,10 @@ button:hover{
    opacity: 1;
 }
 
+.likes:active {
+    transform: translateY(4px);
+}
+
 /* ----SHOW TWEET PAGE STYLING---- */
 .showNav {
     margin: 5% auto;
@@ -289,8 +293,16 @@ button:hover{
 }
 
 .showTweetProfileName {
+    font-size: 125%;
     margin: 5% auto;
     text-align: center;
+}
+
+.showTweetPage {
+    height: 75vh;
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .showTweet {
@@ -446,22 +458,21 @@ button:hover{
 
 .showProfile {
     text-align: center;
-    margin: 7% auto;
+    margin: 5% auto;
     font-size: 125%;
 }
 
 .profileTweetsSection {
-    margin: 7% auto;
+    margin: 5% auto;
+    height: 75vh;
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .profileTweet {
     margin: 5% auto;
     border-top: solid 2px #42a5f5;
-    opacity: .9;
-}
-
-.profileTweet:hover {
-    opacity: 1;
 }
 
 .profileTimeLikeSection {

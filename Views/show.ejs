@@ -17,55 +17,60 @@
         <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
     </div>
 
-    <div class="showTweet">
-        <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
-        <h3 class="tweettext"><%= oneTweet.text %></h3>
-        <div class="showTweetTimeLikeSection">
-            <div class="showTweetTimeStamp">
-                <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
-            </div>
-            <div class="showTweetLikeButton">
-                <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
+    <div class="showTweetPage">
+
+        <div class="showTweet">
+            <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
+            <h3 class="tweettext"><%= oneTweet.text %></h3>
+            <div class="showTweetTimeLikeSection">
+                <div class="showTweetTimeStamp">
+                    <h4><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+                </div>
+                <div class="showTweetLikeButton">
+                    <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="showPageEditDeleteSection">
-        <div class="showPageEditTweet">
-            <button class="showPageEditButton"><a class="editButton" href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
+        <div class="showPageEditDeleteSection">
+            <div class="showPageEditTweet">
+                <button class="showPageEditButton"><a class="editButton" href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
+            </div>
+            <div class="showPageDeleteTweet">
+                <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
+                    <button class="showPageDeleteTweetButton" type="submit">Delete Tweet</button>
+                </form>
+            </div>
         </div>
-        <div class="showPageDeleteTweet">
-            <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
-                <button class="showPageDeleteTweetButton" type="submit">Delete Tweet</button>
+
+        <div class="showPageCommentForm">
+            <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
+                <input name="handle" placeholder="What's your handle?"/>
+                <input name="text" maxlength="250" placeholder="Your thoughts?"/>
+                <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
+                <input class="showPageSubmitCommentButton" type="submit" value="Submit Comment"/>
             </form>
         </div>
-    </div>
 
-    <div class="showPageCommentForm">
-        <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
-            <input name="handle" placeholder="What's your handle?"/>
-            <input name="text" maxlength="250" placeholder="Your thoughts?"/>
-            <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
-            <input class="showPageSubmitCommentButton" type="submit" value="Submit Comment"/>
-        </form>
-    </div>
-
-    <div class="commentTimeline">
-        <div class="showComments">
-            <!-- ADD THE COMMENT SECTION HERE -->
-            <%for(let i = 0; i < comments.length; i++){%>
-                <%const time=comments[i].createdAt.toString().substring(0, 24)%>
-                <div class="showComment">
-                    <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
-                    <h3 class="tweetext"><%= comments[i].text %></h3>
-                    <h4 class="commentTime"><%= time %></h4>
-                </div>
-                <div class="showPageDeleteComment">
-                    <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
-                        <button type="submit">Delete Comment</button>
-                    </form>
-                </div>
-            <%}%>
+        <div class="commentTimeline">
+            <div class="showComments">
+                <!-- ADD THE COMMENT SECTION HERE -->
+                <%for(let i = 0; i < comments.length; i++){%>
+                    <%const time=comments[i].createdAt.toString().substring(0, 24)%>
+                    <div class="showComment">
+                        <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
+                        <h3 class="tweetext"><%= comments[i].text %></h3>
+                        <h4 class="commentTime"><%= time %></h4>
+                    </div>
+                    <div class="showPageDeleteComment">
+                        <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
+                            <button type="submit">Delete Comment</button>
+                        </form>
+                    </div>
+                <%}%>
+            </div>
+            
         </div>
+
     </div>
 
     </div>
