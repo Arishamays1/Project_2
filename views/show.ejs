@@ -31,7 +31,7 @@
 
             <div class = "showPageEditDeleteSection">
                 <div class = "showPageEditTweet">
-                    <button class = "showPageEditButton"><a class = "editButton" href = "/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
+                    <button class = "showPageEditButton"><a href = "/tweets/<%=oneTweet._id%>/edit" class = "editButton">Edit Tweet</a></button>
                 </div>
                 <div class = "showPageDeleteTweet">
                     <form method = "POST" action = "/tweets/<%=oneTweet._id%>?_method=DELETE">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="showPageCommentForm">
+            <div class = "showPageCommentForm">
                 <form action = "/tweets/<%=oneTweet._id%>" method = "POST"> 
                     <input class = "commentHandleForm" name = "handle" type="hidden" placeholder = "What's your handle?" value="<%= profile.id %>"/>
                     <input class = "commentTextForm" name = "text" maxlength = "250" placeholder = "Your thoughts?"/>
