@@ -22,9 +22,15 @@
             <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
             <!-- ----TWEET SHOW ROUTE---- -->
             <h3><a href="/tweets/<%= oneTweet._id %>"><%= oneTweet.text %></a></h3>
-            <h4 style="color:red"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
-            <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
-           </div>
+                <div class="indexTimeLikeSection">
+                    <div class="indexTimeStamp">
+                        <h4 style="color:red"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+                    </div>
+                    <div class="likeButton">
+                        <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
+                    </div>
+                </div>
+            </div>
         <% } %>
     </div>
     <!-- like request -->

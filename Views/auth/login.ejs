@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+<body>
+
+    <div class="loginPage">
+        <div class="loginHeader">
+            <h1>Elon Musk's Twitter</h1>
+        </div>
+        <div class="loginTitle">
+            <h1 class="title">Login</h1>
+        </div>
+
+        <div class="loginForm"></div>
+            <form action="/login" method="POST">
+            <div class="loginEmail">
+                <label class="label">Email</label>
+                <div class="control">
+                <input
+                    name="email"
+                    class="input"
+                    type="email"
+                    placeholder="example@domain.com"
+                />
+                </div>
+            </div>
+            <div class="loginPassword">
+                <label class="label">Password</label>
+                <div class="control">
+                <input
+                    name="password"
+                    class="input"
+                    type="password"
+                    placeholder="******"
+                />
+                </div>
+            </div>
+            <div class="loginButtons">
+                <div class="loginBack">
+                    <button><a href="/register">Back</a></button>
+                </div>
+                <div class="loginSubmit">
+                    <div class="control">
+                    <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

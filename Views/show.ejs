@@ -20,11 +20,18 @@
     <div class="showTweet">
         <h2>@<a href="/profiles/<%= oneTweet.handle._id %>"><%= oneTweet.handle.handle %></a></h2>
         <h3><%= oneTweet.text %></h3>
-        <h4 style="color:red;"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+        <div class="showTweetTimeLikeSection">
+            <div class="showTweetTimeStamp">
+                <h4 style="color:red;"><%= oneTweet.createdAt.toString().substring(0, 24) %></h4>
+            </div>
+            <div class="showTweetLikeButton">
+                <button type= "button" class= "likes" id="<%= oneTweet._id %>">Like: <%= oneTweet.tweetLikes %></button>
+            </div>
+        </div>
     </div>
     <div class="showPageEditDeleteSection">
         <div class="showPageEditTweet">
-            <a href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a>
+            <button class="showPageEditButton"><a href="/tweets/<%=oneTweet._id%>/edit">Edit Tweet</a></button>
         </div>
         <div class="showPageDeleteTweet">
             <form method="POST" action="/tweets/<%=oneTweet._id%>?_method=DELETE">
@@ -36,7 +43,7 @@
     <div class="showPageCommentForm">
         <form action="/tweets/<%=oneTweet._id%>" method="POST"> 
             <input name="handle" placeholder="What's your handle?"/>
-            <input name="text" placeholder="Your thoughts?" maxlength="250"/>
+            <input name="text" maxlength="250" placeholder="Your thoughts?"/>
             <input type="hidden" value="<%=oneTweet._id%>" name="tweet"/>
             <input type="submit" value="Submit Comment"/>
         </form>
@@ -60,6 +67,20 @@
     </div>
 
     </div>
+
+    <script type="text/javascript">
+        const likeButtons = document.querySelectorAll(".likes")
+        for (let i = 0; i < likeButtons.length; i++) {
+            const button = likeButtons.item(i);
+            button.addEventListener("click", function(){ postLike(button.id) })
+        }
+        async function postLike(id) {
+            const res = await fetch(`/tweets/liked/${id}`, {
+                method: 'POST'
+            });
+            return res.json();
+        }
+    </script>
     
 </body>
 
