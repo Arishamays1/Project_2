@@ -5,11 +5,9 @@
 
 <body>
     <div class = "editPage">
-
         <div class = "editNav">
             <%- include('partials/nav.ejs')%>
         </div>
-
         <div class = "editHeader">
             <h1>Elon Musk's Twitter | Edit Tweet</h1>
         </div>
@@ -18,18 +16,18 @@
             <h2 class = "tweethandle">@<a href = "/profiles/<%= tweet.handle._id %>" class = "tweetHandleLink"><%= tweet.handle.handle %></a></h2>
         </div>
 
-        <div class="editTweetForm">
-            <form method="POST" action="/tweets/<%= tweet._id %>?_method=PUT">
-                <div class="editTweetHandleSection">
+        <div class = "editTweetForm">
+            <form method = "POST" action = "/tweets/<%= tweet._id %>?_method=PUT">
+                <div class = "editTweetHandleSection">
                     <label>Handle</label>
-                    <input type="text" name="handle" value="<%= tweet.handle.handle%>"/>
+                    <input type = "text" name = "handle" value = "<%= tweet.handle.handle%>"/>
                 </div>
-                <div class="editTweetTextSection">
+                <div class = "editTweetTextSection">
                     <label>Tweet</label>
-                    <input type="text" name="text" value="<%= tweet.text%>"/>
+                    <input type = "text" name = "text" value = "<%= tweet.text%>"/>
                 </div>
                 <div>
-                    <input class="updateButton" type="submit" value="Update Tweet"/>
+                    <input class = "updateButton" type = "submit" value = "Update Tweet"/>
                 </div>
             </form>
         </div>
