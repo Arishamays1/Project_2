@@ -64,10 +64,11 @@ router.post('/', async (req, res, next) => {
     try {
         // console.log(`The req.body is ${req.body}`)
         const createdTweet = await db.Tweet.create(req.body);
+        console.log(`Here is the new ${createdTweet}`)
         // console.log(`The created tweet is ${createdTweet}`) DELETE IN FINAL DRAFT
         res.redirect('/tweets');
     } catch (error) {
-        // console.log(error); DELETE IN FINAL DRAFT
+        console.log(error);
         req.error = error; 
         return next();
     }

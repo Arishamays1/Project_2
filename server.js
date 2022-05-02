@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const controllers = require('./controllers');
+const navLinks = require('./navLinks');
 const PORT = process.env.PORT || 4000
 
 // SESSION
@@ -30,6 +31,14 @@ app.use(
         },
     })
 )
+
+app.use(navLinks)
+app.use(function (req, res, next) {
+    res.locals.profile = req.session.currentProfile;
+    console.log(res.locals);
+    console.log(`Current profile is ${res.locals.profile}`)
+    next();
+})
 
 //--------CONTROLLERS----------
 app.use('/tweets', controllers.tweets);

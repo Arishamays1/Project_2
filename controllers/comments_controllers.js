@@ -32,7 +32,7 @@ const allComments = await db.Comment.find({})
 })
 
 //--------POST Route to send back to tweet ejs--------
-router.post('/new',async (req, res) => {
+router.post('/new', async (req, res) => {
     try { 
         const newCommentData = req.body;
         const createdComment = await db.Comment.create(newCommentData);
@@ -53,7 +53,7 @@ router.delete('/:commentId', async (req,res, next) => {
     // console.log(deletedComment.id, "<<comment |",deletedComment.tweet,"<<tweet") DELETE IN FINAL DRAFT 
        res.redirect(`/tweets/${deletedComment.tweet}`);
     } catch(error) {
-        // console.log(error);
+        console.log(error);
         req.error = error;
         return next();
     }
