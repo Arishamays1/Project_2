@@ -19,12 +19,12 @@
         <div class = "editTweetForm">
             <form method = "POST" action = "/tweets/<%= tweet._id %>?_method=PUT">
                 <div class = "editTweetHandleSection">
-                    <label>Handle</label>
-                    <input type = "text" name = "handle" value = "<%= tweet.handle.handle%>"/>
+                    <!-- <label>Handle</label> -->
+                    <input class="editTweetHandleInput" type = "hidden" name = "handle" value = "<%= profile.id %>"/>
                 </div>
                 <div class = "editTweetTextSection">
-                    <label>Tweet</label>
-                    <input type = "text" name = "text" value = "<%= tweet.text%>"/>
+                    <!-- <label>Tweet</label> -->
+                    <input class="editTweetTextInput" type = "text" name = "text" value = "<%= tweet.text%>"/>
                 </div>
                 <div>
                     <input class = "updateButton" type = "submit" value = "Update Tweet"/>

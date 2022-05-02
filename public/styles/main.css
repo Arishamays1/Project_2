@@ -543,6 +543,26 @@ button:hover{
     margin: 3% auto;
 }
 
+.editTweetHandleInput {
+    background-color: #010415;
+    border-bottom: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 2vh;
+    width: 49vw;
+}
+
+.editTweetTextInput {
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    color: aliceblue;
+    font-size: 115%;
+    height: 10vh;
+    width: 49vw;
+}
+
 .updateButton {
     background-color: #90E0EF;
     border-style: none;
@@ -673,6 +693,7 @@ button:hover{
         flex-direction: column;
         align-items: center;
     }
+
     .registerEmail {
         margin-top: 5%;
         margin-bottom: 5%;
@@ -689,6 +710,7 @@ button:hover{
         flex-direction: column;
         align-items: center;
     }
+
     .loginEmail {
         margin-top: 5%;
         margin-bottom: 5%;
