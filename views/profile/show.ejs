@@ -1,46 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 
     <%- include('../partials/head.ejs') %>
 
 <body>
+    <div class = "showHandlePage">
+        <div class = "showHandleNav">
+            <%- include('../partials/nav.ejs')%>
+        </div>
 
-    <div class="showHandlePage">
+        <div class = "showHandleHeader">
+            <h1>Elon Musk's Twitter | Show Profile</h1>
+        </div>
 
-    <div class="showHandleNav">
-        <%- include('../partials/nav.ejs')%>
-    </div>
+        <div class = "showProfile">
+            <h2 class = "tweethandle"> @<%= oneProfile.handle %></h2>
+        </div>
 
-    <div class="showHandleHeader">
-        <h1>Elon Musk's Twitter | Show Profile</h1>
-    </div>
-
-    <div class="showProfile">
-        <h2 class="tweethandle"> @<%= oneProfile.handle %></h2>
-    </div>
-
-    <div class="profileTweetsSection">
-        <% for (let i =0; i < profileTweets.length; i++) { %>
-            <% const profile = profileTweets[i] %>
-            <div class="profileTweet">
-                <h2 class="tweethandle">@<%= oneProfile.handle %></h2>
-                <h3 class="tweettext"><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
-                <div class="profileTimeLikeSection">
-                    <div class="profileTimeStamp">
-                        <h4 profileTime><%= profile.createdAt.toString().substring(0, 24) %></h4>
-                    </div>
-                    <div class="profileLikeButton">
-                        <button type= "button" class= "likes" id="<%= profile._id %>">Like: <%= profile.tweetLikes %></button>
-                    </div>
+        <div class = "profileTweetsSection">
+            <% for (let i =0; i < profileTweets.length; i++) { %>
+                <% const profile = profileTweets[i] %>
+                <div class = "profileTweet">
+                    <h2 class = "tweethandle">@<%= oneProfile.handle %></h2>
+                        <h3 class = "tweettext"><a href = "/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
+                        <div class = "profileTimeLikeSection">
+                            <div class = "profileTimeStamp">
+                                <h4 profileTime><%= profile.createdAt.toString().substring(0, 24) %></h4>
+                            </div>
+                            <div class = "profileLikeButton">
+                                <button typ e= "button" class = "likes" id = "<%= profile._id %>">Like: <%= profile.tweetLikes %></button>
+                            </div>
+                        </div>
                 </div>
-                <% } %>
-            </div>
-            
+            <% } %>
+        </div>
     </div>
-        
-    </div>
+
     <!-- like request -->
-    <script type="text/javascript">
+    <script type = "text/javascript">
         const likeButtons = document.querySelectorAll(".likes")
         for (let i = 0; i < likeButtons.length; i++) {
             const button = likeButtons.item(i);
