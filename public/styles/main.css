@@ -558,14 +558,28 @@ button:hover{
         margin: auto 5%;
     }
 
-    .profileTweets {
-        margin: auto 5%;
+    .showTweetPage {
+        height: 75vh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: scroll;      
     }
 
     .showTweet {
         margin: auto 5%;
     }
 
+    .commentTimeline {
+        margin: auto 5%;
+    }
+
+    .profileTweetsSection {
+        height: 75vh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: scroll; 
+    }
+    
     .newTweet {
         margin: 10% 5%;
     }
