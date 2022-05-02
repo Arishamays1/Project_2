@@ -4,33 +4,32 @@
     <%- include('partials/head.ejs') %>
 
 <body>
-    <div class="newPage">
+    <div class = "newPage">
+        <div class = "newNav">
+            <%- include('partials/nav.ejs')%>
+        </div>
 
-    <div class="newNav">
-        <%- include('partials/nav.ejs')%>
-    </div>
-
-    <div class="newHeader">
-        <h1>Elon Musk's Twitter | Create New Tweet</h1>
-    </div>
-    
-    <div class="newTweet">
-        <form method="POST" action="/tweets">
-            <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
-            <!-- action => destination for the post req -->
-                <div class="createNewHandleSection">
-                    <label for="handle"> Twitter Handle: </label>
-                    <input class="newTweetHandleInput" id="handle" name="handle" type="text" placeholder="Twitter Handle" />
-                </div>
-                <div class="createNewTweetTextSection">
-                    <label for="text"> What's happening? </label>
-                    <input class="newTweetTextInput" id="text" name="text" type="text" maxlength="250" placeholder="What's Happening?" />
-                </div>
-                <div class="createNewButtonSection">
-                    <input class="createNewButton" type="submit" value="Create new tweet">
-                </div>
-        </form>
-    </div>
+        <div class = "newHeader">
+            <h1>Elon Musk's Twitter | Create New Tweet</h1>
+        </div>
+        
+        <div class = "newTweet">
+            <form method = "POST" action = "/tweets">
+                <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
+                <!-- action => destination for the post req -->
+                    <div class = "createNewHandleSection">
+                        <label for = "handle"> Twitter Handle:</label>
+                        <input class = "newTweetHandleInput" id = "handle" name = "handle" type = "text" placeholder = "Twitter Handle" />
+                    </div>
+                    <div class = "createNewTweetTextSection">
+                        <label for = "text"> What's happening?</label>
+                        <input class="newTweetTextInput" id = "text" name = "text" type = "text" maxlength = "250" placeholder = "What's Happening?"/>
+                    </div>
+                    <div class = "createNewButtonSection">
+                        <input class = "createNewButton" type = "submit" value = "Create new tweet">
+                    </div>
+            </form>
+        </div>
     </div>
 
 </body>
