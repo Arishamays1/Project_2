@@ -41,16 +41,19 @@
             </div>
 
             <div class = "showPageCommentForm">
-                <form action = "/tweets/<%=oneTweet._id%>" method = "POST"> 
-                    <input class = "commentHandleForm" name = "handle" type="hidden" placeholder = "What's your handle?" value="<%= profile.id %>"/>
-                    <div class="commentTextSection">
-                        <input class = "commentTextForm" name = "text" maxlength = "250" placeholder = "Your thoughts?"/>
-                    </div>
-                    <input type = "hidden" value = "<%=oneTweet._id%>" name = "tweet"/>
-                    <div class="commentSubmitSection">
-                        <input class = "showPageSubmitCommentButton" type = "submit" value = "Submit Comment"/>
-                    </div>
-                </form>
+                <% if (!profile) { %>
+                    <% } else if (profile) { %> 
+                        <form action = "/tweets/<%=oneTweet._id%>" method = "POST"> 
+                            <input class = "commentHandleForm" name = "handle" type="hidden" placeholder = "What's your handle?" value="<%= profile.id %>"/>
+                            <div class="commentTextSection">
+                                <input class = "commentTextForm" name = "text" maxlength = "250" placeholder = "Your thoughts?"/>
+                            </div>
+                            <input type = "hidden" value = "<%=oneTweet._id%>" name = "tweet"/>
+                            <div class="commentSubmitSection">
+                                <input class = "showPageSubmitCommentButton" type = "submit" value = "Submit Comment"/>
+                            </div>
+                        </form>
+                <% } %>
             </div>
 
             <div class = "commentTimeline">

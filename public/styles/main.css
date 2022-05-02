@@ -530,6 +530,7 @@ button:hover{
 }
 
 .editProfileName {
+    font-size: 125%;
     margin: 5% auto;
     text-align: center;
 }
@@ -559,6 +560,7 @@ button:hover{
     border: solid 2px #42a5f5;
     color: aliceblue;
     font-size: 115%;
+    text-align: center;
     height: 10vh;
     width: 49vw;
 }
@@ -676,6 +678,11 @@ button:hover{
     color: #030825;
     margin: 5% auto;
     text-align: center;
+}
+
+/* MISC CSS */
+.hidden {
+    display: hidden;
 }
 
 /* ----MOBILE VERSION---- */
