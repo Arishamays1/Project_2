@@ -5,17 +5,13 @@
 
 <body>
     <div class = "indexPage">
-
         <div class = "indexNav">
             <%- include('partials/nav.ejs')%>
         </div>
-
-        <div class="indexHeader">
-            <h1>Elon Musk's Twitter</h1>
+        <div class = "indexHeader">
+                <h1>Elon Musk's Twitter</h1>
         </div>
-
         <div class = "timeline">
-
             <div class = "timelineNewTweet">
                 <form method = "POST" action = "/tweets">
                     <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
@@ -53,6 +49,7 @@
             <% } %>
         </div>
     </div>
+    
     <!-- like request -->
     <script type="text/javascript">
         const likeButtons = document.querySelectorAll(".likes")
