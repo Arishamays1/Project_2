@@ -76,15 +76,68 @@ a {
 }
 
 .registerHandle {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
+}
+
+.registerHandleForm {
+    background-color: #010415;
+    color: aliceblue;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    width: 49vw;
 }
 
 .registerEmail {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
+}
+
+.registerEmailForm {
+    background-color: #010415;
+    color: aliceblue;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    width: 49vw;
 }
 
 .registerPassword {
-    margin: 5% auto;
+    /* margin: 5% auto; */
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 4px #42a5f5;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
+}
+
+.registerPasswordForm {
+    background-color: #010415;
+    color: aliceblue;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    width: 49vw;
 }
 
 .registerSubmit {
@@ -119,11 +172,45 @@ a {
 }
 
 .loginEmail {
-    margin: 5% auto;
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
+}
+
+.loginEmailForm {
+    background-color: #010415;
+    color: aliceblue;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    width: 49vw;
 }
 
 .loginPassword {
-    margin: 5% auto;
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 4px #42a5f5;
+    color: aliceblue;
+    font-size: 95%;
+    height: 4vh;
+    width: 49vw;
+}
+
+.loginPasswordForm {
+    background-color: #010415;
+    color: aliceblue;
+    border: none;
+    font-size: 100%;
+    text-align: center;
+    width: 49vw;
 }
 
 .loginButtons {
@@ -366,8 +453,33 @@ button:hover{
 }
 
 .showPageCommentForm {
+    background-color: #0d0e12;
+    border: solid 2px #42a5f5;
     text-align: center;
     margin: 5% auto;
+}
+
+.commentHandleForm {
+    background-color: #0d0e12;
+    border-bottom: solid 2px #42a5f5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    text-align: center;
+    height: 3vh;
+    width: 49vw;
+}
+
+.commentTextForm {
+    background-color: #0d0e12;
+    color: aliceblue;
+    border: none;
+    font-size: 95%;
+    text-align: center;
+    height: 7vh;
+    width: 49vw;
 }
 
 .showComments {
@@ -395,6 +507,7 @@ button:hover{
     background-color: #90E0EF;
     border-style: none;
     color: #030825;
+    margin-bottom: 3%;
     opacity: .8;
 }
 
@@ -559,14 +672,28 @@ button:hover{
         margin: auto 5%;
     }
 
-    .profileTweets {
-        margin: auto 5%;
+    .showTweetPage {
+        height: 75vh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: scroll;      
     }
 
     .showTweet {
         margin: auto 5%;
     }
 
+    .commentTimeline {
+        margin: auto 5%;
+    }
+
+    .profileTweetsSection {
+        height: 75vh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: scroll; 
+    }
+    
     .newTweet {
         margin: 10% 5%;
     }
