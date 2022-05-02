@@ -22,7 +22,7 @@
     <div class="profileTweetsSection">
         <% for (let i =0; i < profileTweets.length; i++) { %>
             <% const profile = profileTweets[i] %>
-            <div class="profileTweets">
+            <div class="profileTweet">
                 <h2 class="tweethandle">@<%= oneProfile.handle %></h2>
                 <h3 class="tweettext"><a href="/tweets/<%= profile._id %>"><%= profile.text %></a></h3>
                 <div class="profileTimeLikeSection">

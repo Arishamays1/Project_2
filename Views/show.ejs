@@ -50,13 +50,15 @@
     </div>
 
     <div class="commentTimeline">
-        <div class="showComment">
+        <div class="showComments">
             <!-- ADD THE COMMENT SECTION HERE -->
             <%for(let i = 0; i < comments.length; i++){%>
                 <%const time=comments[i].createdAt.toString().substring(0, 24)%>
-                <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
-                <h3 class="tweetext"><%= comments[i].text %></h3>
-                <h4 class="commentTime"><%= time %></h4>
+                <div class="showComment">
+                    <h2 class="tweethandle">@<a class="tweetHandleLink" href="/profiles/<%= comments[i].handle._id %>"><%= comments[i].handle.handle %></a></h2>
+                    <h3 class="tweetext"><%= comments[i].text %></h3>
+                    <h4 class="commentTime"><%= time %></h4>
+                </div>
                 <div class="showPageDeleteComment">
                     <form method="POST" action="/comments/<%=comments[i]._id%>?_method=DELETE">
                         <button type="submit">Delete Comment</button>

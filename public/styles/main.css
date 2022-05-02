@@ -165,12 +165,75 @@ a {
 
 .timeline {
     margin: 10% auto;
+    height: 75vh;
+    width: 50vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.timelineNewTweet {
+    margin-bottom: -5%;
+}
+
+.timelineNewHandleSection {
+    text-align: center;
+}
+
+.timelineNewTweetHandleInput {
+    background-color: #010415;
+    border: solid 2px #42a5f5;
+    border-left: none;
+    border-right: none;
+    color: aliceblue;
+    font-size: 95%;
+    height: 2vh;
+    width: 49vw;
+}
+
+.timelineNewTweetTextSection {
+    text-align: center;
+}
+
+.timelineNewTweetTextInput {
+    background-color: #010415;
+    border-color: #42a5f5;
+    border-style: groove;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color: aliceblue;
+    font-size: 115%;
+    height: 10vh;
+    width: 49vw;
+}
+
+.timelineNewButtonSection {
+    text-align: center;
+}
+
+.timelineNewButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
+    margin: 2% auto;
+    text-align: center;
+    opacity: .9;
+}
+
+.timelineNewButton:hover {
+    opacity: 1;
 }
 
 .tweet {
     margin: 5% auto;
     border-top: solid 2px #42a5f5;
     padding: 8px 0 0 0;
+    opacity: .9;
+}
+
+.tweet:hover {
+    opacity: 1;
 }
 
 .tweethandle {
@@ -253,7 +316,6 @@ button:hover{
 
 .showTweetTimeStamp {
     color: #0077B6;
-    font
 }
 
 .showPageEditDeleteSection {
@@ -294,8 +356,16 @@ button:hover{
     margin: 5% auto;
 }
 
+.showComments {
+    margin: 5% auto;
+}
+
 .showComment {
-    margin: 5% auto;    
+    opacity: .9;
+}
+
+.showComment:hover {
+    opacity: 1;
 }
 
 .commentTime {
@@ -311,7 +381,14 @@ button:hover{
     background-color: #90E0EF;
     border-style: none;
     color: #030825;
+    opacity: .8;
 }
+
+.showPageSubmitCommentButton:hover {
+    background-color: #7fc4fd;
+    opacity: 1;
+}
+
 /* ----EDIT PAGE STYLING---- */
 .editNav {
     margin: 5% auto;
@@ -340,8 +417,17 @@ button:hover{
 }
 
 .updateButton {
+    background-color: #90E0EF;
+    border-style: none;
+    color: #030825;
     margin: 5% auto;
     text-align: center;
+    opacity: .8;
+}
+
+.updateButton:hover {
+    background-color: #7fc4fd;
+    opacity: 1;
 }
 
 /* ----SHOW PROFILE PAGE STYLING---- */
@@ -367,9 +453,14 @@ button:hover{
     margin: 7% auto;
 }
 
-.profileTweets {
+.profileTweet {
     margin: 5% auto;
     border-top: solid 2px #42a5f5;
+    opacity: .9;
+}
+
+.profileTweet:hover {
+    opacity: 1;
 }
 
 .profileTimeLikeSection {
@@ -412,6 +503,25 @@ button:hover{
 
 .createNewHandleSection {
     margin: 3% auto;
+    text-align: center;
+}
+
+.newTweetHandleInput {
+    background-color: #010415;
+    border-style: groove;
+}
+
+.newTweetTextInput {
+    background-color: #010415;
+    border-style: groove;
+}
+
+.createNewTweetTextSection {
+    text-align: center;
+}
+
+.createNewButtonSection {
+    text-align: center;
 }
 
 .createNewButton {
@@ -419,7 +529,34 @@ button:hover{
     border-style: none;
     color: #030825;
     margin: 5% auto;
+    text-align: center;
 }
 
+/* MOBILE VERSION */
+@media only screen and (max-width: 600px) {
+
+    .timeline {
+    height: 75vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    }
+
+    .tweet {
+        margin: auto 5%;
+    }
+
+    .profileTweets {
+        margin: auto 5%;
+    }
+
+    .showTweet {
+        margin: auto 5%;
+    }
+
+    .newTweet {
+        margin: 10% 5%;
+    }
+}
 
 
