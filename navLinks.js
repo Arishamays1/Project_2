@@ -1,6 +1,6 @@
 const routes = [
     { href: "/tweets", title: "Home |" },
-    { href: "/tweets/new", title: " Tweet |" },
+    { href: "/tweets/newtweet", title: " Tweet |" },
     { href: "/logout", title: " Logout"},
 ];
 
