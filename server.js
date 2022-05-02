@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const controllers = require('./controllers');
-const PORT = 4000;
+const PORT = process.env.PORT || 4000
 
 // SESSION
 const session = require('express-session');
