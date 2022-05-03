@@ -25,5 +25,7 @@ Javascript, CSS, HTML, MongoDB, Mongoose, Express.js, Heroku, Node.Js
 [Arisha Mays](https://github.com/Arishamays1)
 
 ## Code Snippet
- <% if (!profile) { %>
-                    <% } else if (profile) { %> 
+![Screen Shot 2022-05-03 at 9 55 48 AM](https://user-images.githubusercontent.com/99516928/166479132-10590c85-f04b-463a-92ad-26b8e427a354.png)
+
+![Screen Shot 2022-05-03 at 9 55 23 AM](https://user-images.githubusercontent.com/99516928/166479238-41fffc15-ffec-4d3a-840d-e724719b97df.png)
+
