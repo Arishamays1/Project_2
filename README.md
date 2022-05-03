@@ -17,9 +17,13 @@ A social website to share musings with the public
 ![Imgur](https://i.imgur.com/rxEetoR.png)
 
 ### Technology
-Javascript, CSS, HTML, MongoDB, Mongoose, Express.js
+Javascript, CSS, HTML, MongoDB, Mongoose, Express.js, Heroku, Node.Js
 
 ## Collaborators
 [Kimberly Baldeo](https://github.com/kimbaldeo)
 [Jeffrey Green](https://github.com/jeffreygreenjr)
 [Arisha Mays](https://github.com/Arishamays1)
+
+## Code Snippet
+ <% if (!profile) { %>
+                    <% } else if (profile) { %> 
