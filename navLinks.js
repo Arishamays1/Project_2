@@ -4,7 +4,7 @@ const routes = [
 ];
 
 const authRoutes = [
-    { href: "/", title: "Home |" },
+    { href: "/tweets", title: "Home |" },
     { href: "/register", title: " Register |" },
     { href: "/login", title: " Login" },
 ];

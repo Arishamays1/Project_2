@@ -380,9 +380,16 @@ button:hover{
     text-align: center;
 }
 
+.showPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .showTweetProfileName {
     font-size: 125%;
-    margin: 5% auto;
+    margin: 4% auto;
     text-align: center;
 }
 
@@ -394,7 +401,7 @@ button:hover{
 }
 
 .showTweet {
-    margin: 5% auto;
+    margin-top: 5%;
     border-top: solid 2px #42a5f5;
     border-bottom: solid 2px #42a5f5;
 }
@@ -482,11 +489,18 @@ button:hover{
     width: 49vw;
 }
 
+.commentTitle {
+    border-bottom: solid 2px #42a5f5;
+    font-size: 120%;
+    text-align: center;
+}
+
 .showComments {
     margin: 5% auto;
 }
 
 .showComment {
+    margin: auto 10%;
     opacity: .9;
 }
 
@@ -496,6 +510,7 @@ button:hover{
 
 .commentTime {
     margin: 4% auto;
+    color: #0077B6;
 }
 
 .showPageDeleteComment {
@@ -780,6 +795,10 @@ button:hover{
     
     .newTweet {
         margin: 10% 5%;
+    }
+
+    .editTweetTextInput {
+        width: 90vw;
     }
 }
 

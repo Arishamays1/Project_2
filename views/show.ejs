@@ -28,18 +28,20 @@
                         </div>
                     </div>
             </div>
-
+            <% if (!profile || profile.id != oneTweet.handle._id) { %>
+                <% } else if (profile.id == oneTweet.handle._id) { %> 
             <div class = "showPageEditDeleteSection">
                 <div class = "showPageEditTweet">
-                    <button class = "showPageEditButton"><a href = "/tweets/<%=oneTweet._id%>/edit" class = "editButton">Edit Tweet</a></button>
+                            <button class = "showPageEditButton"><a href = "/tweets/<%=oneTweet._id%>/edit" class = "editButton">Edit Tweet</a></button>
                 </div>
                 <div class = "showPageDeleteTweet">
-                    <form method = "POST" action = "/tweets/<%=oneTweet._id%>?_method=DELETE">
-                        <button class = "showPageDeleteTweetButton" type = "submit">Delete Tweet</button>
-                    </form>
+                            <form method = "POST" action = "/tweets/<%=oneTweet._id%>?_method=DELETE">
+                                <button class = "showPageDeleteTweetButton" type = "submit">Delete Tweet</button>
+                            </form>
                 </div>
             </div>
-
+            <% } %>
+ 
             <div class = "showPageCommentForm">
                 <% if (!profile) { %>
                     <% } else if (profile) { %> 
@@ -57,6 +59,7 @@
             </div>
 
             <div class = "commentTimeline">
+                <div class="commentTitle">Comments</div>
                 <div class = "showComments">
                         <!-- ADD THE COMMENT SECTION HERE -->
                     <% for(let i = 0; i < comments.length; i++) { %>
